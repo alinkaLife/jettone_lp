@@ -1,0 +1,37 @@
+.item {
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-1-border-1);
+    background: var(--color-1-background-2);
+    padding: 16px;
+}
+
+.item__top {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    transition: 500ms;
+}
+
+.icon__open {
+    transform: rotate(-180deg);
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.title {
+padding-right: 16px;
+}
+
+
+@media screen and (min-width:744px) {
+    .item {
+        padding: 20px;
+    }
+
+}

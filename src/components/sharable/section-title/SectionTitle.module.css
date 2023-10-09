@@ -1,0 +1,21 @@
+.title {
+    color: var(--color-1-white);
+    text-align: center;
+    font-family: Rubik;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.title::after {
+    content: " ";
+    display: block;
+
+    width: 160px;
+    height: 2px;
+
+    margin: 20px auto 0px auto;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #6B40EA 0%, #019DF0 100%);
+}

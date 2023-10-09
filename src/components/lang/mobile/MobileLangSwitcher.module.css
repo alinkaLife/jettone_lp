@@ -1,0 +1,42 @@
+.list {
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-1-border-1);
+    background: var(--color-1-background-3);
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    padding: 16px 12px;
+
+}
+
+.list li {
+    display: flex;
+    justify-content: center;
+}
+
+.list button {
+    cursor: pointer;
+
+    color: var(--color-1-white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    background: var(--color-1-background-3);
+    outline: none;
+    border: none;
+}
+
+.list .active {
+    background: var(--color-1-gradient-main-fill);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 744px) {
+    .list {
+        display: none;
+    }
+}

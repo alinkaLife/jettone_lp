@@ -1,0 +1,38 @@
+.nav__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__list>li>a {
+    display: block;
+    padding: 14px;
+    color: var(--color-1-white);
+    text-align: center;
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    background: var(--color-1-background-2);
+}
+
+.nav__list>li>a:hover {
+    cursor: pointer;
+    background: var(--color-1-background-3);
+}
+
+.active {
+    background: var(--color-1-background-3) !important;
+}
+
+
+@media screen and (min-width: 1280px) {
+    .nav__list {
+        flex-direction: row;
+    }
+
+    .nav__list>li>a {
+        background-color: transparent;
+        white-space: nowrap;
+    }
+}

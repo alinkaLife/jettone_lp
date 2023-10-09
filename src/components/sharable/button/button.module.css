@@ -1,0 +1,22 @@
+.btn {
+    padding: 16px 32px;
+    width: 100%;
+    cursor: pointer;
+
+    border-radius: 30px;
+
+    font-family: inherit;
+    color: var(--color-1-white, #FFF);
+    text-align: center;
+    line-height: 16px;
+}
+
+.btn__base {
+    border: 1px solid var(--color-1-gradient-main-border);
+    background: var(--color-1-gradient-main-fill);
+}
+
+.btn__secondary {
+    background-color: transparent;
+    border: 1px solid #6B40EA;
+}

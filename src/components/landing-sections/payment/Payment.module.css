@@ -1,0 +1,128 @@
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 12px;
+}
+
+.text {
+    color: var(--color-1-white);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.delivery {
+    color: var(--color-1-text-1);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.item {
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-1-border-1);
+    background: var(--color-1-background-2);
+    padding: 16px;
+    gap: 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    border: 1px solid var(--color-1-gradient-main-border);
+    background: var(--color-1-gradient-main-fill);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.section__subtitle {
+    color: var(--color-1-white);
+    font-size: 16px;
+    text-align: center;
+}
+
+.section__subtitle span {
+    background: var(--color-1-gradient-main-fill);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.payment__list {
+    display: grid;
+    grid-gap: 16px;
+}
+
+.payment__item {
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-1-border-1);
+    background: var(--color-1-background-3);
+
+    display: flex;
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+@media screen and (min-width: 744px) {
+    .list {
+        gap: 20px;
+    }
+
+    .item {
+        padding: 24px;
+    }
+
+    .text {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .delivery {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .section__subtitle {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .payment__list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .item {
+        padding: 32px;
+    }
+
+    .text {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .section__subtitle {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .payment__list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .payment__item {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+}

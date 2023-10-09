@@ -1,0 +1,126 @@
+.text {
+    color: var(--color-1-white);
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.item {
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-1-border-1);
+    background: var(--color-1-background-3);
+
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.image {
+    padding: 45px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn__list {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 12px;
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--color-1-border-1);
+    background: var(--color-1-background-2);
+}
+
+.btn>img {
+    display: block;
+}
+
+.btn__prev {
+    transform: rotate(90deg);
+}
+
+.btn__next {
+    transform: rotate(-90deg);
+}
+
+
+
+@media screen and (min-width: 744px) {
+    .text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .list {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .item {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .image {
+        padding: 60px 0px;
+    }
+
+    .image img {
+        width: 424px;
+        height: 224px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 220px auto;
+        gap: 20px
+    }
+
+    .main__right {
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .btn__list {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .image img {
+        width: 680px;
+        height: 360px;
+    }
+
+    .main {
+        grid-template-columns: 380px auto;
+        gap: 120px
+    }
+
+    .main__right {
+        padding-left: 0px;
+    } 
+
+        .image {
+            padding: 40px 0px;
+        }
+}

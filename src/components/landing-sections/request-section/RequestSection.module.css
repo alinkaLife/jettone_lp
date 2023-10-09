@@ -1,0 +1,37 @@
+.img__wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.img__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    border-radius: var(--border-radius-large);
+    border: 2px solid var(--color-1-background-3-border);
+    background: var(--color-1-background-2);
+
+    padding: 40px 20px;
+}
+
+.isVisibleOnTablet {
+    display: none;
+}
+
+@media screen and (min-width: 744px) {
+    .main__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .isHidden {
+        display: none;
+    }
+
+    .isVisibleOnTablet {
+        display: block;
+    }
+}

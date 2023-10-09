@@ -1,0 +1,38 @@
+.list {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.list>li>p {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.list>li>img {
+    width: 48px;
+    height: 36px;
+}
+
+@media screen and (min-width: 744px) {
+    .list {
+        gap: 32px;
+    }
+
+    .list>li>img {
+        width: 88px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .list {
+        gap: 40px;
+    }
+
+    .list>li>img {
+        width: 100px;
+        height: 64px;
+    }
+}
