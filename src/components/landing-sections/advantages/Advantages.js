@@ -18,7 +18,7 @@ const Advantages = () => {
     const { t } = useTranslation();
     return (
 
-        <section id="advantages">
+        <section className={styles.advantages} id="advantages">
             <div className='container'>
                 <SectionTitle>
                     {t('advantages.title')}

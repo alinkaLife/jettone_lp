@@ -36,6 +36,12 @@
     line-height: 16px;
 }
 
+@media screen and(max-width:744px) {
+    .advantages {
+        padding-top: 80px;
+    }
+}
+
 @media screen and (min-width: 744px) {
     .advantage {
         display: grid;
