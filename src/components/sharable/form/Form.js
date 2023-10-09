@@ -95,7 +95,7 @@ const Form = ({ onFormSubmit }) => {
                 {t('form.send')}
             </Button>
             {serverErrors && <ul style={{ marginTop: '20px', }}>
-                {serverErrors.map(el => <li style={{
+                {serverErrors.map((el, i) => <li key={`form-error-${i}`} style={{
                     color: 'red',
                     textAlign: 'center'
                 }}>{el}</li>)}
