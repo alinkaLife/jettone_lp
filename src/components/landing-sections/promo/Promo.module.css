@@ -64,6 +64,10 @@
     transform: rotate(-90deg);
 }
 
+.main {
+    margin-top: 20px;
+}
+
 @media screen and (min-width: 744px) {
 
     .text {

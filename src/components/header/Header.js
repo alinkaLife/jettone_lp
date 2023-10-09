@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Logoicon from '../../assets/icons/logo.svg'
 import styles from './Header.module.css'
@@ -14,25 +14,24 @@ const Header = ({ handleModalOpen }) => {
     const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false)
     const [isClient, setIsClient] = useState(false);
 
-
-    const handleOpen = () => {
+    const handleMobileToggle = () => {
         setisMobileMenuOpen(prev => !prev)
-        document.body.style.overflow = 'hidden'
+        setTimeout(() => {
+            const doc = document.body.style.overflow
+            if (doc === 'auto' || !doc) {
+                document.body.style.overflow = 'hidden'
+            } else {
+                document.body.style.overflow = 'auto'
+            }
+        }, 0)
     }
-
-    const handleClose = () => {
-        setisMobileMenuOpen(false)
-        document.body.style.overflow = 'auto'
-    }
-
 
     useEffect(() => {
         setIsClient(true)
     }, [])
 
-
     const navigation = isClient ? <Nav
-        onNavClick={handleClose}
+        onNavClick={handleMobileToggle}
     /> : <></>
 
     return (
@@ -41,11 +40,15 @@ const Header = ({ handleModalOpen }) => {
         >
             <div className='container'>
                 <div className={styles.header}>
-                    <Image priority={true} src={Logoicon} alt='logo' />
+                    <Image
+                        priority={true}
+                        src={Logoicon}
+                        alt='logo'
+                    />
                     <div className={styles.nav__wrapper}>
                         <Image
                             priority={true}
-                            onClick={handleOpen}
+                            onClick={handleMobileToggle}
                             className={styles.burger}
                             src={isMobileMenuOpen ? Close : Open}
                             alt='burger menu closed'
@@ -64,13 +67,13 @@ const Header = ({ handleModalOpen }) => {
                     <div className={styles.mobile__menu}>
                         <div style={{ minHeight: '100%', display: 'flex' }} className='container'>
                             <div className={styles.mobile__wrapper}>
-                                <div>
+                                <div style={{ paddingBottom: '20px' }}>
                                     {navigation}
                                     <div className={styles.btn} >
-                                        <Button>Подать заявку</Button>
+                                        <Button onClick={handleModalOpen}>Подать заявку</Button>
                                     </div>
                                 </div>
-                                < MobileLangSwitcher />
+                                <MobileLangSwitcher />
                             </div>
                         </div>
                     </div>

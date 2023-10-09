@@ -12,7 +12,7 @@ const Hero = ({ handleModalOpen }) => {
             src={coinImage}
             alt='Five coins'
             quality={100}
-            sizes="(max-width: 744px) 100vw, (max-width: 1300px) 50vw, 33vw"
+            sizes="240px, (max-width: 744px) 342px, (max-width: 1300px) 550px"
         />
     )
     const { t } = useTranslation();

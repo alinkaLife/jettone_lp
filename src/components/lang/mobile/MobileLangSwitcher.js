@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './MobileLangSwitcher.module.css'
 import { useRouter } from 'next/router'
 
-const MobileLangSwitcher = () => {
+const MobileLangSwitcher = ({}) => {
     const router = useRouter();
 
     return (
