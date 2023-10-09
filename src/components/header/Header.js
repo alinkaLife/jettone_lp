@@ -41,9 +41,10 @@ const Header = ({ handleModalOpen }) => {
         >
             <div className='container'>
                 <div className={styles.header}>
-                    <Image src={Logoicon} alt='logo' />
+                    <Image priority={true} src={Logoicon} alt='logo' />
                     <div className={styles.nav__wrapper}>
                         <Image
+                            priority={true}
                             onClick={handleOpen}
                             className={styles.burger}
                             src={isMobileMenuOpen ? Close : Open}

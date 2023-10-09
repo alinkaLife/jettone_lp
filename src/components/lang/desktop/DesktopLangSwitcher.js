@@ -13,7 +13,7 @@ const DesktopLangSwitcher = () => {
         router.push(router.asPath, router.asPath, { locale: event.target.value, scroll: false })
     }
 
-    const CustiomIcon = (props) => <Image {...props} src={Arrow} alt='arrow' />
+    const CustiomIcon = (props) => <Image {...props} src={Arrow} priority={true} alt='arrow' />
 
     const languageList = router.locales.map(locale => {
         return <MenuItem className={styles.option} key={locale} value={locale}>

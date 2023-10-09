@@ -1,3 +1,12 @@
+.geo {
+    background-image: url(../../../assets/icons/geo/World.svg);
+    background-repeat: no-repeat;
+    background-position: 50% -136%;
+    background-size: 390px 257px;
+
+    padding-bottom: 40px;
+}
+
 .list {
     display: flex;
     gap: 16px;
@@ -16,6 +25,12 @@
 }
 
 @media screen and (min-width: 744px) {
+    .geo {
+        background-position: 50% 150%;
+        background-size: 546px 360px;
+        padding-bottom: 100px;
+    }
+
     .list {
         gap: 32px;
     }
@@ -26,7 +41,7 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1300px) {
     .list {
         gap: 40px;
     }

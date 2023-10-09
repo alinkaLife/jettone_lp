@@ -2,18 +2,15 @@ import React from 'react'
 import SectionTitle from '../../sharable/section-title/SectionTitle'
 import styles from './Geo.module.css'
 import Image from 'next/image'
-import ru from '../../../assets/img/geo/ru.png'
-import kz from '../../../assets/img/geo/kz.png'
-import ua from '../../../assets/img/geo/ua.png'
-import az from '../../../assets/img/geo/az.png'
-import uz from '../../../assets/img/geo/uz.png'
-
-
-
+import ru from '../../../assets/icons/geo/ru.svg'
+import kz from '../../../assets/icons/geo/kz.svg'
+import ua from '../../../assets/icons/geo/ua.svg'
+import az from '../../../assets/icons/geo/az.svg'
+import uz from '../../../assets/icons/geo/uz.svg'
 
 const Geo = () => {
     return (
-        <section>
+        <section className={styles.geo}>
             <div className='container'>
                 <SectionTitle>ГЕО</SectionTitle>
                 <ul className={styles.list}>
@@ -53,9 +50,7 @@ const Geo = () => {
                         <p>UZ</p>
                     </li>
                 </ul>
-
             </div>
-
         </section>
     )
 }

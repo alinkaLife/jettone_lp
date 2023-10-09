@@ -43,6 +43,8 @@
     color: var(--color-1-white);
     font-size: 16px;
     text-align: center;
+
+    margin-top: 32px;
 }
 
 .section__subtitle span {
@@ -92,6 +94,8 @@
     .section__subtitle {
         font-size: 20px;
         line-height: 24px;
+
+        margin-top: 40px;
     }
 
     .payment__list {
@@ -100,7 +104,7 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1300px) {
     .item {
         padding: 32px;
     }

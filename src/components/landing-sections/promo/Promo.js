@@ -10,7 +10,7 @@ import Picture4 from '../../../assets/icons/promo/icon5.svg'
 import Picture5 from '../../../assets/icons/promo/icon6.svg'
 import Picture6 from '../../../assets/icons/promo/icon7.svg'
 import Picture7 from '../../../assets/icons/promo/icon8.svg'
-import Img from '../../../assets/icons/promo/promo-image.png'
+import Img from '../../../assets/img/promo-image.webp'
 import Arrow from '../../../assets/icons/arrow.svg'
 import { useTranslation } from 'next-i18next'
 
@@ -30,7 +30,7 @@ const Promo = () => {
     ]
 
     return (
-        <section id='promo'>
+        <section className={styles.promo} id='promo'>
             <div className='container'>
                 <SectionTitle>
                     {t('promo.title')}
@@ -60,6 +60,7 @@ const Promo = () => {
                             <Image
                                 src={Img}
                                 alt='tablet'
+                                quality={100}
                             />
                         </div>
                         <ul className={styles.btn__list}>

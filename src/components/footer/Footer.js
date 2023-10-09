@@ -22,14 +22,14 @@ const Footer = () => {
                                     src={telegram}
                                     alt='telegram'
                                 />
-                                <a href=''>@support</a>
+                                <a target='_blank' href="https://t.me/JetTonPartners">@support</a>
                             </li>
                             <li className={styles.item}>
                                 <Image
                                     src={mail}
                                     alt='mail'
                                 />
-                                <a href='mail:support.jetton@gmail.com'>support.jetton@gmail.com</a>
+                                <a target='_blank' href='mailto:support.jetton@gmail.com'>support.jetton@gmail.com</a>
                             </li>
                         </ul>
                     </div>

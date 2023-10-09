@@ -6,6 +6,9 @@
 .img__wrapper {
     display: flex;
     justify-content: center;
+    width: 310px;
+    height: 310px;
+    margin: auto;
 }
 
 .main {
@@ -33,5 +36,10 @@
 
     .isVisibleOnTablet {
         display: block;
+    }
+
+    .img__wrapper {
+        width: auto;
+        height: auto;
     }
 }

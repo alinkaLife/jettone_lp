@@ -1,3 +1,7 @@
+.promo {
+    padding-top: 0px;
+}
+
 .text {
     color: var(--color-1-white);
     text-align: center;
@@ -60,9 +64,8 @@
     transform: rotate(-90deg);
 }
 
-
-
 @media screen and (min-width: 744px) {
+
     .text {
         font-size: 14px;
         line-height: 20px;
@@ -105,7 +108,7 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1300px) {
     .image img {
         width: 680px;
         height: 360px;
@@ -118,9 +121,9 @@
 
     .main__right {
         padding-left: 0px;
-    } 
+    }
 
-        .image {
-            padding: 40px 0px;
-        }
+    .image {
+        padding: 40px 0px;
+    }
 }

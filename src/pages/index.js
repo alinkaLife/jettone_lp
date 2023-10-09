@@ -14,6 +14,7 @@ import { useState } from 'react'
 
 
 import RequestModal from '@/components/modal/RequestModal'
+import Head from 'next/head'
 
 function Home() {
   const [isRequestModalOpen, setIsRequestModalOpen] = useState(false);
@@ -21,6 +22,9 @@ function Home() {
   const handleToggleModal = () => setIsRequestModalOpen(prev => !prev)
   return (
     <>
+      <Head>
+        <title>Партнерская программа JetTon</title>
+      </Head>
       <Header handleModalOpen={handleToggleModal} />
       <main>
         <Hero handleModalOpen={handleToggleModal} />
@@ -40,7 +44,7 @@ function Home() {
         handleToggleModal={handleToggleModal}
         isRequestModalOpen={isRequestModalOpen}
       />
-   
+
 
     </>
   )

@@ -26,7 +26,7 @@
 }
 
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1300px) {
     .nav__list {
         flex-direction: row;
     }

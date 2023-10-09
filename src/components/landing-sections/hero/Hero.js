@@ -1,6 +1,6 @@
 import styles from '../hero/Hero.module.css';
 import Image from 'next/image'
-import coinImage from '../../../assets/img/coin-image.png'
+import coinImage from '../../../assets/img/coin-image.webp'
 import React from 'react'
 import Button from '../../sharable/button/button';
 import { useTranslation } from 'next-i18next'
@@ -8,14 +8,17 @@ import { useTranslation } from 'next-i18next'
 const Hero = ({ handleModalOpen }) => {
     const image = (
         <Image
+            priority={true}
             src={coinImage}
             alt='Five coins'
+            quality={100}
+            sizes="(max-width: 744px) 100vw, (max-width: 1300px) 50vw, 33vw"
         />
     )
     const { t } = useTranslation();
 
     return (
-        <section id='hero'>
+        <section className={styles.hero__section} id='hero'>
             <div className='container'>
                 <div className={styles.hero}>
                     <div className={styles.hero__wrapper}>

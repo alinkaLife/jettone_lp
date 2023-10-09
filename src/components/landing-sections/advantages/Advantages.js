@@ -2,33 +2,40 @@ import React from 'react'
 import styles from './Advantages.module.css'
 import SectionTitle from '../../sharable/section-title/SectionTitle'
 import Image from 'next/image'
-import imageArea from '../../../assets/img/image-area-tablet.png'
-import PeopleIcon from '../../../assets/icons/advantages/heroicons_user-group-20-solid.svg'
 import { useTranslation } from 'next-i18next'
+import imageArea from '../../../assets/img/why-image.webp'
+
+import PeopleIcon1 from '../../../assets/icons/advantages/icon1.svg'
+import PeopleIcon2 from '../../../assets/icons/advantages/icon2.svg'
+import PeopleIcon3 from '../../../assets/icons/advantages/icon3.svg'
+import PeopleIcon4 from '../../../assets/icons/advantages/icon4.svg'
+import PeopleIcon5 from '../../../assets/icons/advantages/icon5.svg'
+import PeopleIcon6 from '../../../assets/icons/advantages/icon6.svg'
+import PeopleIcon7 from '../../../assets/icons/advantages/icon7.svg'
+import PeopleIcon8 from '../../../assets/icons/advantages/icon8.svg'
 
 const Advantages = () => {
     const { t } = useTranslation();
     return (
-        
+
         <section id="advantages">
             <div className='container'>
-
                 <SectionTitle>
                     {t('advantages.title')}
-
                 </SectionTitle>
-
                 <div className={styles.advantage}>
                     <div className={styles.img__wrapper}>
                         <Image
                             src={imageArea}
                             alt='phone'
+                            quality={100}
+                            sizes="(max-width: 744px) 100vw, (max-width: 1300px) 50vw, 33vw"
                         />
                     </div>
                     <ul className={styles.list}>
                         <li className={styles.list__item}>
                             <Image
-                                src={PeopleIcon}
+                                src={PeopleIcon1}
                                 alt='people icon'
                             />
                             <p>
@@ -37,7 +44,7 @@ const Advantages = () => {
                         </li>
                         <li className={styles.list__item}>
                             <Image
-                                src={PeopleIcon}
+                                src={PeopleIcon2}
                                 alt='people icon'
                             />
                             <p>
@@ -46,7 +53,7 @@ const Advantages = () => {
                         </li>
                         <li className={styles.list__item}>
                             <Image
-                                src={PeopleIcon}
+                                src={PeopleIcon3}
                                 alt='people icon'
                             />
                             <p>
@@ -55,7 +62,7 @@ const Advantages = () => {
                         </li>
                         <li className={styles.list__item}>
                             <Image
-                                src={PeopleIcon}
+                                src={PeopleIcon4}
                                 alt='people icon'
                             />
                             <p>
@@ -66,7 +73,7 @@ const Advantages = () => {
                     <ul className={styles.list}>
                         <li className={styles.list__item}>
                             <Image
-                                src={PeopleIcon}
+                                src={PeopleIcon5}
                                 alt='people icon'
                             />
                             <p>
@@ -75,7 +82,7 @@ const Advantages = () => {
                         </li>
                         <li className={styles.list__item}>
                             <Image
-                                src={PeopleIcon}
+                                src={PeopleIcon6}
                                 alt='people icon'
                             />
                             <p>
@@ -84,7 +91,7 @@ const Advantages = () => {
                         </li>
                         <li className={styles.list__item}>
                             <Image
-                                src={PeopleIcon}
+                                src={PeopleIcon7}
                                 alt='people icon'
                             />
                             <p>
@@ -93,7 +100,7 @@ const Advantages = () => {
                         </li>
                         <li className={styles.list__item}>
                             <Image
-                                src={PeopleIcon}
+                                src={PeopleIcon8}
                                 alt='people icon'
                             />
                             <p>

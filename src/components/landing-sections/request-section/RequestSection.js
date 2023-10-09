@@ -1,7 +1,7 @@
 import SectionTitle from '../../sharable/section-title/SectionTitle'
 import styles from './RequestSection.module.css'
 import Image from 'next/image'
-import imageForm from '../../../assets/form/form-image.png'
+import imageForm from '../../../assets/img/form-image.webp'
 import { useTranslation } from 'next-i18next'
 
 import React from 'react'
@@ -27,6 +27,7 @@ const RequestSection = () => {
                             <Image
                                 src={imageForm}
                                 alt='phoneImage'
+                                quality={100}
                             />
                         </div>
                         <div>

@@ -1,3 +1,7 @@
+.hero__section {
+    padding-top: 0px;
+}
+
 .title {
     color: var(--color-1-white);
     text-align: center;
@@ -15,6 +19,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 16px;
+}
+
+.img__wrapper img {
+    width: 240px;
+    height: 240px;
 }
 
 .hero {
@@ -43,6 +52,11 @@
         margin: auto;
     }
 
+    .hero__right img {
+        width: 342px;
+        height: 342px;
+    }
+
     .hero__left {
         margin: auto;
     }
@@ -65,7 +79,7 @@
 
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1300px) {
     .hero {
         min-height: 640px;
     }
@@ -79,5 +93,11 @@
         font-size: 20px;
         line-height: 28px;
         margin-bottom: 40px;
+    }
+
+    .hero__right img {
+        width: 550px;
+        height: 550px;
+        margin: 0px;
     }
 }
