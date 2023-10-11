@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next'
 
 import React from 'react'
 import Form from '@/components/sharable/form/Form'
+import { motion } from "framer-motion"
 
 const RequestSection = () => {
     const { t } = useTranslation();
@@ -24,13 +25,21 @@ const RequestSection = () => {
                     <div className={styles.main__wrapper}>
 
                         <div className={styles.img__wrapper}>
-                            <Image
-                                src={imageForm}
-                                alt='phoneImage'
-                                quality={100}
-                            />
+                            <motion.div
+                                initial={{ y: 180 }}
+                                whileInView={{ y: 0 }}
+                                transition={{ duration: 0.3, ease: 'easeOut' }}
+                                viewport={{ margin: '-40px' }}
+
+                            >
+                                <Image
+                                    src={imageForm}
+                                    alt='phoneImage'
+                                    quality={100}
+                                />
+                            </motion.div>
                         </div>
-                        <div>
+                        <div className={styles.form__block}>
                             <div className={styles.isVisibleOnTablet}>
                                 {title}
                             </div>

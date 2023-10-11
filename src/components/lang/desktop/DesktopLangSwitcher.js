@@ -10,7 +10,7 @@ const DesktopLangSwitcher = () => {
     const router = useRouter()
 
     const handleChange = (event) => {
-        router.push(router.asPath, router.asPath, { locale: event.target.value, scroll: false })
+        router.push('/', '/', { locale: event.target.value })
     }
 
     const CustiomIcon = (props) => <Image {...props} src={Arrow} priority={true} alt='arrow' />

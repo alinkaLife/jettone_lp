@@ -3,15 +3,8 @@ import styles from '../expandable-list/expandable.module.css'
 import ArrowIcon from '../../../assets/icons/arrow.svg'
 import Image from 'next/image'
 
-const defaultDescription = `Lorem ipsum dolor sit amet consectetur.
-Egestas quisque nisi adipiscing et mi hendrerit id pellentesque.
-Non mauris condimentum vel eget laoreet mi consectetur bibendum.
-Id tellus commodo non augue. Id non elit eget et sed sed est id.
-Faucibus etiam euismod dictumst nisl odio at mauris.
-Pellentesque facilisi nisi est et nunc. 
-`
 
-const Expandable = ({ title, description = defaultDescription }) => {
+const Expandable = ({ title, description }) => {
 
     const [open, setOpen] = useState(false)
 

@@ -37,31 +37,8 @@
     justify-content: center;
 }
 
-.btn__list {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    gap: 12px;
-    justify-content: center;
-}
-
-.btn {
-    cursor: pointer;
-    padding: 12px;
-    border-radius: var(--border-radius-small);
-    border: 1px solid var(--color-1-border-1);
-    background: var(--color-1-background-2);
-}
-
-.btn>img {
-    display: block;
-}
-
-.btn__prev {
-    transform: rotate(90deg);
-}
-
-.btn__next {
-    transform: rotate(-90deg);
+.image img {
+    height: 100%;
 }
 
 .main {
@@ -107,9 +84,6 @@
         justify-content: space-between;
     }
 
-    .btn__list {
-        justify-content: flex-end;
-    }
 }
 
 @media screen and (min-width: 1300px) {

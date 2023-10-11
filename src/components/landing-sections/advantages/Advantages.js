@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Advantages.module.css'
 import SectionTitle from '../../sharable/section-title/SectionTitle'
 import Image from 'next/image'
+import { motion } from "framer-motion"
 import { useTranslation } from 'next-i18next'
 import imageArea from '../../../assets/img/why-image.webp'
 
@@ -16,8 +17,8 @@ import PeopleIcon8 from '../../../assets/icons/advantages/icon8.svg'
 
 const Advantages = () => {
     const { t } = useTranslation();
-    return (
 
+    return (
         <section className={styles.advantages} id="advantages">
             <div className='container'>
                 <SectionTitle>
@@ -25,12 +26,19 @@ const Advantages = () => {
                 </SectionTitle>
                 <div className={styles.advantage}>
                     <div className={styles.img__wrapper}>
-                        <Image
-                            src={imageArea}
-                            alt='phone'
-                            quality={100}
-                            sizes="(max-width: 744px) 100vw, (max-width: 1300px) 50vw, 33vw"
-                        />
+                        <motion.div
+                            initial={{ y: 180 }}
+                            whileInView={{ y: 0 }}
+                            transition={{ duration: 0.3, ease: 'easeOut' }}
+                            viewport={{ margin: '-40px' }}
+                        >
+                            <Image
+                                src={imageArea}
+                                alt='phone'
+                                quality={100}
+                                sizes="(max-width: 744px) 100vw, (max-width: 1300px) 50vw, 33vw"
+                            />
+                        </motion.div>
                     </div>
                     <ul className={styles.list}>
                         <li className={styles.list__item}>

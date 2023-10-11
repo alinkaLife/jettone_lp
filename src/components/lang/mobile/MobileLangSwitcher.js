@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './MobileLangSwitcher.module.css'
 import { useRouter } from 'next/router'
 
-const MobileLangSwitcher = ({}) => {
+const MobileLangSwitcher = ({ }) => {
     const router = useRouter();
 
     return (
@@ -14,7 +14,7 @@ const MobileLangSwitcher = ({}) => {
                     >
                         <button
                             onClick={() => {
-                                router.push(router.asPath, router.asPath, { locale: el, scroll: false })
+                                router.push('/', '/', { locale: el })
                             }}
                             className={router.locale === el ? styles.active : undefined}
                         >

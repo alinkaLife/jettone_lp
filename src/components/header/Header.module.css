@@ -19,6 +19,7 @@
     width: 100%;
     height: calc(100% - 80px);
     position: fixed;
+    z-index: 1000;
     background: var(--color-1-background-2);
 
     padding-top: 48px;

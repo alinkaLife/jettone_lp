@@ -7,12 +7,14 @@ import kz from '../../../assets/icons/geo/kz.svg'
 import ua from '../../../assets/icons/geo/ua.svg'
 import az from '../../../assets/icons/geo/az.svg'
 import uz from '../../../assets/icons/geo/uz.svg'
+import { useTranslation } from 'next-i18next'
 
 const Geo = () => {
+    const { t } = useTranslation()
     return (
         <section className={styles.geo}>
             <div className='container'>
-                <SectionTitle>ГЕО</SectionTitle>
+                <SectionTitle>{t('geo')}</SectionTitle>
                 <ul className={styles.list}>
                     <li>
                         <Image

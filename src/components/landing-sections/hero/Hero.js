@@ -1,21 +1,64 @@
 import styles from '../hero/Hero.module.css';
 import Image from 'next/image'
-import coinImage from '../../../assets/img/coin-image.webp'
 import React from 'react'
 import Button from '../../sharable/button/button';
 import { useTranslation } from 'next-i18next'
+import icon5 from '@/assets/hero/coin5.png'
+import icon1 from '@/assets/hero/coin1.png'
+import icon2 from '@/assets/hero/coin2.png'
+import icon3 from '@/assets/hero/coin3.png'
+import icon4 from '@/assets/hero/coin4.png'
 
-const Hero = ({ handleModalOpen }) => {
-    const image = (
-        <Image
-            priority={true}
-            src={coinImage}
-            alt='Five coins'
-            quality={100}
-            sizes="280px, (max-width: 744px) 342px, (max-width: 1300px) 550px"
-        />
-    )
+const Hero = ({ isMobileMenuOpen, handleModalOpen }) => {
     const { t } = useTranslation();
+
+    const image = (
+        <div
+            style={isMobileMenuOpen ? { zIndex: '-1' } : { zIndex: 'auto' }}
+            className={styles.image__block}
+        >
+            <Image
+                id={'5'}
+                className={[styles.img__five, 'animated'].join(' ')}
+                priority={true}
+                src={icon5}
+                alt='coins icon'
+                quality={100}
+            />
+            <Image
+                id={'1'}
+                className={[styles.img__one, 'animated__delay'].join(' ')}
+                priority={true}
+                src={icon1}
+                alt='coins icon'
+                quality={100}
+            />
+            <Image
+                id={'2'}
+                className={[styles.img__two, 'animated'].join(' ')}
+                priority={true}
+                src={icon2}
+                alt='coins icon'
+                quality={100}
+            />
+            <Image
+                id={'3'}
+                className={[styles.img__three, 'animated'].join(' ')}
+                priority={true}
+                src={icon3}
+                alt='coins icon'
+                quality={100}
+            />
+            <Image
+                id={'4'}
+                className={[styles.img__four, 'animated__delay'].join(' ')}
+                priority={true}
+                src={icon4}
+                alt='coins icon'
+                quality={100}
+            />
+        </div>
+    )
 
     return (
         <section className={styles.hero__section} id='hero'>
@@ -43,7 +86,6 @@ const Hero = ({ handleModalOpen }) => {
                 </div>
             </div>
         </section>
-
     )
 }
 

@@ -44,9 +44,7 @@ const Payment = () => {
                 </ul>
                 <h3 className={styles.section__subtitle}>
                     {t('payments.subtitle1')}
-                    <span>
-                        {t('payments.subtitle2')}
-                    </span>
+                    <span>{` ${t('payments.subtitle2')} `}</span>
                     {t('payments.subtitle3')}
                 </h3>
                 <ul className={styles.payment__list}>

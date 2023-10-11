@@ -18,6 +18,20 @@ import Head from 'next/head'
 
 function Home() {
   const [isRequestModalOpen, setIsRequestModalOpen] = useState(false);
+  const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false)
+
+  const handleMobileToggle = () => {
+
+    setisMobileMenuOpen(prev => !prev)
+    setTimeout(() => {
+      const doc = document.body.style.overflow
+      if (doc === 'auto' || !doc) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = 'auto'
+      }
+    }, 0)
+  }
 
   const handleToggleModal = () => setIsRequestModalOpen(prev => !prev)
   return (
@@ -25,9 +39,13 @@ function Home() {
       <Head>
         <title>Партнерская программа JetTon</title>
       </Head>
-      <Header handleModalOpen={handleToggleModal} />
+      <Header
+        handleMobileToggle={handleMobileToggle}
+        isMobileMenuOpen={isMobileMenuOpen}
+        handleModalOpen={handleToggleModal}
+      />
       <main>
-        <Hero handleModalOpen={handleToggleModal} />
+        <Hero isMobileMenuOpen={isMobileMenuOpen} handleModalOpen={handleToggleModal} />
         <Advantages />
         <Payment />
         <Geo />

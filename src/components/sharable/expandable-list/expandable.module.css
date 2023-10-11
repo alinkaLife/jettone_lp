@@ -25,7 +25,8 @@
 }
 
 .title {
-padding-right: 16px;
+    padding-right: 16px;
+    color: var(--color-1-white);
 }
 
 

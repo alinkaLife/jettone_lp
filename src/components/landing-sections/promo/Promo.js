@@ -11,9 +11,8 @@ import Picture5 from '../../../assets/icons/promo/icon6.svg'
 import Picture6 from '../../../assets/icons/promo/icon7.svg'
 import Picture7 from '../../../assets/icons/promo/icon8.svg'
 import Img from '../../../assets/img/promo-image.webp'
-import Arrow from '../../../assets/icons/arrow.svg'
 import { useTranslation } from 'next-i18next'
-
+import { motion } from 'framer-motion'
 
 const Promo = () => {
     const { t } = useTranslation();
@@ -57,24 +56,20 @@ const Promo = () => {
                     </ul>
                     <div className={styles.main__right}>
                         <div className={styles.image}>
-                            <Image
-                                src={Img}
-                                alt='tablet'
-                                quality={100}
-                            />
+                            <motion.div
+                                initial={{ y: 180 }}
+                                whileInView={{ y: 0 }}
+                                transition={{ duration: 0.3, ease: 'easeOut' }}
+                                viewport={{ margin: '-40px' }}
+
+                            >
+                                <Image
+                                    src={Img}
+                                    alt='tablet'
+                                    quality={100}
+                                />
+                            </motion.div>
                         </div>
-                        <ul className={styles.btn__list}>
-                            <li>
-                                <button className={[styles.btn, styles.btn__prev].join(' ')}>
-                                    <Image src={Arrow} alt='previous' />
-                                </button>
-                            </li>
-                            <li>
-                                <button className={[styles.btn, styles.btn__next].join(' ')}>
-                                    <Image src={Arrow} alt='previous' />
-                                </button>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

@@ -8,23 +8,16 @@ import MobileLangSwitcher from '../lang/mobile/MobileLangSwitcher'
 import DesktopLangSwitcher from '../lang/desktop/DesktopLangSwitcher'
 import Open from '../../assets/icons/burger_menu_open.svg'
 import Close from '../../assets/icons/burger_menu_close.svg'
+import { useTranslation } from 'next-i18next'
 
 
-const Header = ({ handleModalOpen }) => {
-    const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false)
+const Header = ({
+    handleModalOpen,
+    handleMobileToggle,
+    isMobileMenuOpen
+}) => {
     const [isClient, setIsClient] = useState(false);
-
-    const handleMobileToggle = () => {
-        setisMobileMenuOpen(prev => !prev)
-        setTimeout(() => {
-            const doc = document.body.style.overflow
-            if (doc === 'auto' || !doc) {
-                document.body.style.overflow = 'hidden'
-            } else {
-                document.body.style.overflow = 'auto'
-            }
-        }, 0)
-    }
+    const { t } = useTranslation();
 
     useEffect(() => {
         setIsClient(true)
@@ -56,7 +49,9 @@ const Header = ({ handleModalOpen }) => {
                         <div className={styles.isHidden}>
                             {navigation}
                         </div>
-                        <Button onClick={handleModalOpen} type='secondary'>Подать заявку</Button>
+                        <Button onClick={handleModalOpen} type='secondary'>
+                            {t('request')}
+                        </Button>
                         <DesktopLangSwitcher />
                     </div>
                 </div>
@@ -70,7 +65,9 @@ const Header = ({ handleModalOpen }) => {
                                 <div style={{ paddingBottom: '20px' }}>
                                     {navigation}
                                     <div className={styles.btn} >
-                                        <Button onClick={handleModalOpen}>Подать заявку</Button>
+                                        <Button onClick={handleModalOpen}>
+                                            {t('request')}
+                                        </Button>
                                     </div>
                                 </div>
                                 <MobileLangSwitcher />

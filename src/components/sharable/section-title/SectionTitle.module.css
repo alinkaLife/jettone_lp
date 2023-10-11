@@ -1,10 +1,7 @@
 .title {
     color: var(--color-1-white);
     text-align: center;
-    font-family: Rubik;
     font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 40px;
 }
 
@@ -18,4 +15,18 @@
     margin: 20px auto 0px auto;
     margin-top: 20px;
     background: linear-gradient(90deg, #6B40EA 0%, #019DF0 100%);
+}
+
+@media screen and (min-width:744px) {
+    .title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
