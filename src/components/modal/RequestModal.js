@@ -11,7 +11,11 @@ const RequestModal = ({ handleToggleModal, isRequestModalOpen }) => {
     const { t } = useTranslation()
 
     return (
-        <Modal className={styles.modal} open={isRequestModalOpen}>
+        <Modal
+            onClose={handleToggleModal}
+            className={styles.modal}
+            open={isRequestModalOpen}
+        >
             <div className={styles.modal__wrapper}>
                 <div className={styles.modal__content}>
                     <Image

@@ -36,6 +36,14 @@
     line-height: 16px;
 }
 
+.advantages {
+    background-position: 50% 87px;
+    background-size: 390px;
+
+    background-repeat: no-repeat;
+    background-image: url(../../../assets/hero/lines-bg.webp);
+}
+
 @media screen and(max-width:744px) {
     .advantages {
         padding-top: 80px;
@@ -47,6 +55,12 @@
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 1fr 220px 1fr;
+
+        background-size: 510px;
+    }
+
+    .advantages {
+        background-size: 580px;
     }
 
     .list {
@@ -84,13 +98,22 @@
 
 @media screen and (min-width: 1300px) {
     .advantage {
-        grid-gap: 20px;
+        grid-gap: 50px;
         grid-template-columns: 1fr 286px 1fr;
+    }
+
+    .advantages {
+        background-size: 730px;
     }
 
     .list__item img {
         width: 20px !important;
         height: 20px !important;
+    }
+
+    .list__item p {
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .img__wrapper {

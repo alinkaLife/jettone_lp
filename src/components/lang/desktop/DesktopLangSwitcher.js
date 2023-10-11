@@ -19,7 +19,13 @@ const DesktopLangSwitcher = () => {
 
     const languageList = router.locales.map((locale) => {
         return (
-            <MenuItem className={styles.option} key={locale} value={locale}>
+            <MenuItem
+                disableRipple
+                className={styles.option}
+                id={locale}
+                key={locale}
+                value={locale}
+            >
                 {locale.toUpperCase()}
             </MenuItem>
         )
@@ -27,6 +33,18 @@ const DesktopLangSwitcher = () => {
 
     return (
         <Select
+            MenuProps={{
+                sx: {
+                    '&& .Mui-selected': {
+                        background:
+                            'linear-gradient(90deg, #6B40EA 0%, #019DF0 100%)',
+                        backgroundClip: 'text',
+                        '-webkit-background-clip': 'text',
+                        '-webkit-text-fill-color': 'transparent',
+                    },
+                },
+            }}
+            id={'lang-select'}
             IconComponent={CustiomIcon}
             className={styles.lang}
             value={router.locale}

@@ -15,22 +15,24 @@ const Footer = () => {
                     <div>
                         <h3 className={styles.name}>{t('footer.title')}</h3>
                         <ul className={styles.list}>
-                            <li className={styles.item}>
-                                <Image src={telegram} alt="telegram" />
+                            <li>
                                 <a
+                                    className={styles.item}
                                     target="_blank"
                                     href="https://t.me/JetTonPartners"
                                 >
-                                    @support
+                                    <Image src={telegram} alt="telegram" />
+                                    <span>@support</span>
                                 </a>
                             </li>
-                            <li className={styles.item}>
-                                <Image src={mail} alt="mail" />
+                            <li>
                                 <a
+                                    className={styles.item}
                                     target="_blank"
                                     href="mailto:support.jetton@gmail.com"
                                 >
-                                    support.jetton@gmail.com
+                                    <Image src={mail} alt="mail" />
+                                    <span>support.jetton@gmail.com</span>
                                 </a>
                             </li>
                         </ul>

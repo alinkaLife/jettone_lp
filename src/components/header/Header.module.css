@@ -1,15 +1,20 @@
-.header {
-    padding: 24px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__fixed {
+.header__top {
+    opacity: 1;
     position: fixed;
     width: 100%;
     background-color: var(--color-1-background-1);
+    z-index: 1000;
 }
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 80px;
+}
+
 
 .burger {
     cursor: pointer;
@@ -44,7 +49,7 @@
 }
 
 @media screen and (min-width: 744px) {
-
+    .header {}
 
     .btn {
         display: none;
@@ -62,6 +67,8 @@
 }
 
 @media screen and (min-width: 1300px) {
+    .header {}
+
     .burger {
         display: none;
     }

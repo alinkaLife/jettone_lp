@@ -16,12 +16,20 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
+    color: var(--color-1-white);
 }
 
-.item>a {
+.item>a>span {
+    background-color: transparent;
     color: var(--color-1-white);
     font-size: 12px;
     line-height: 12px;
+}
+
+.item:hover {
+    color: var(--color-1-white);
+    background: var(--gradient-main-fill);
 }
 
 .list {
@@ -63,5 +71,12 @@
 
     .name {
         text-align: right;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .name {
+        font-size: 24px;
+        line-height: 32px;
     }
 }

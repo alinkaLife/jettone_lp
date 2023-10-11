@@ -11,10 +11,13 @@
     background: var(--color-1-background-3, #2E3869);
     padding: 19px 14px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.img {
-    margin: auto;
+.item img {
+    width: 80px;
+    height: 41px;
 }
 
 @media screen and (min-width:744px) {
@@ -23,6 +26,19 @@
 
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .item img {
+        width: 100px;
+        height: 52px;
+    }
+
+}
+@media screen and (min-width:1300px) {
+    
+    .item img {
+        width: 120px;
+        height: 62px;
     }
 
 }

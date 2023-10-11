@@ -15,8 +15,7 @@
   --border-radius-large: 24px;
 
   --color-1-white: #FFF;
-
-
+  --gradient-main-fill: linear-gradient(90deg, #6B40EA 0%, #019DF0 100%);
 }
 
 html {
@@ -26,7 +25,7 @@ html {
 html,
 body {
   position: relative;
-  background: var(--color-1-background-1);
+  background: #171B35;
   padding: 0;
   margin: 0;
 
@@ -36,6 +35,10 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+
+main {
+  padding-top: 80px;
 }
 
 a {
@@ -85,6 +88,36 @@ footer {
 
 footer {
   padding-bottom: 40px;
+}
+
+.MuiPaper-root {
+  background: #1D2345;
+}
+
+.MuiMenu-list {
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid #3D4987;
+  background: #1D2345;
+
+  color: #FFF;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.MuiMenuItem-root {
+  padding: 6px 0px;
+  justify-content: center;
+  font-family: Rubik;
+}
+
+.MuiMenuItem-root.Mui-selected {
+
+  background-color: transparent;
 }
 
 @media screen and (min-width: 744px) {

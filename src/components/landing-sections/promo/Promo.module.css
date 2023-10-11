@@ -29,6 +29,16 @@
 
     font-size: 10px;
     line-height: 12px;
+
+    cursor: pointer;
+    transition: all 250ms ease-in;
+
+    color: var(--color-1-white);
+}
+
+.item:hover {
+    transition: all 500ms ease-out;
+    background: var(--gradient-main-fill);
 }
 
 .image {
@@ -42,7 +52,7 @@
 }
 
 .main {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 @media screen and (min-width: 744px) {
@@ -54,12 +64,18 @@
 
     .list {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 40px);
     }
 
     .item {
+        padding: 12px 16px;
         font-size: 12px;
         line-height: 16px;
+    }
+
+    .item img {
+        width: 16px;
+        height: 16px;
     }
 
     .image {
@@ -80,8 +96,7 @@
     .main__right {
         padding-left: 40px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      align-items: center;
     }
 
 }
@@ -89,7 +104,11 @@
 @media screen and (min-width: 1300px) {
     .image img {
         width: 680px;
-        height: 360px;
+        height: 325px;
+    }
+
+    .list {
+        grid-template-rows: repeat(8, 50px);
     }
 
     .main {
@@ -103,5 +122,22 @@
 
     .image {
         padding: 40px 0px;
+    }
+
+    .text {
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .item {
+        padding: 18px 20px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .item img {
+        width: 20px;
+        height: 20px;
     }
 }

@@ -1,10 +1,11 @@
 .geo {
     background-image: url(../../../assets/icons/geo/World.svg);
     background-repeat: no-repeat;
-    background-position: 50% -136%;
-    background-size: 390px 257px;
+    background-position: 50% 50%;
+    background-size: 395px 293px;
+    padding-bottom: 75px;
+    padding-top: 75px;
 
-    padding-bottom: 40px;
 }
 
 .list {
@@ -22,12 +23,20 @@
 .list>li>img {
     width: 48px;
     height: 36px;
+    border-radius: var(--border-radius-small);
+}
+
+.list>li>p {
+    color: var(--color-1-white);
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 744px) {
     .geo {
-        background-position: 50% 150%;
-        background-size: 546px 360px;
+        background-position: 50% 50%;
+        background-size: 510px 335px;
         padding-bottom: 100px;
     }
 
@@ -49,5 +58,9 @@
     .list>li>img {
         width: 100px;
         height: 64px;
+    }
+
+    .list>li>p {
+        font-size: 14px;
     }
 }

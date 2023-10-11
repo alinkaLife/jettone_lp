@@ -25,7 +25,7 @@ const Header = ({ handleModalOpen, handleMobileToggle, isMobileMenuOpen }) => {
     )
 
     return (
-        <header className={isMobileMenuOpen ? styles.header__fixed : undefined}>
+        <header className={styles.header__top}>
             <div className="container">
                 <div className={styles.header}>
                     <Image priority={true} src={Logoicon} alt="logo" />

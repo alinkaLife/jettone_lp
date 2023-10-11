@@ -69,6 +69,11 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+
+    color: var(--white, #FFF);
+    text-align: center;
+    font-size: 12px;    
+    line-height: 16px;
 }
 
 @media screen and (min-width: 744px) {
@@ -101,6 +106,11 @@
     .payment__list {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+    .payment__item img{
+        width: 24px;
+        height: 24px;
     }
 }
 

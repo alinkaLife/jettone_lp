@@ -14,9 +14,11 @@
     font-weight: 400;
     line-height: 20px;
     background: var(--color-1-background-2);
+    transition: all 500ms ease-out;
 }
 
 .nav__list>li>a:hover {
+        transition: all 500ms ease-out;
     cursor: pointer;
     background: var(--color-1-background-3);
 }
@@ -27,6 +29,10 @@
 
 
 @media screen and (min-width: 1300px) {
+    .nav__list>li>a {
+        padding: 30px 16px;
+    }
+
     .nav__list {
         flex-direction: row;
     }
