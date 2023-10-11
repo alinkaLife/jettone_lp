@@ -91,14 +91,14 @@ footer {
 }
 
 .MuiPaper-root {
-  background: #1D2345;
+  background: #1D2345 !important;
 }
 
 .MuiMenu-list {
   padding: 16px 20px;
   border-radius: 8px;
-  border: 1px solid #3D4987;
-  background: #1D2345;
+  border: 1px solid #3D4987 !important;
+  background: #1D2345 !important;
 
   color: #FFF;
   text-align: center;
@@ -117,7 +117,7 @@ footer {
 
 .MuiMenuItem-root.Mui-selected {
 
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 @media screen and (min-width: 744px) {
