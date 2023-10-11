@@ -1,8 +1,8 @@
 .title {
     color: var(--color-1-white);
     text-align: center;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 20px !important;
+    line-height: 24px !important;
 }
 
 .title::after {
@@ -19,14 +19,14 @@
 
 @media screen and (min-width:744px) {
     .title {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 24px !important;
+        line-height: 32px !important;
     }
 }
 
 @media screen and (min-width:1300px) {
     .title {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 32px !important;
+        line-height: 40px !important;
     }
 }
