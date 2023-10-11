@@ -10,15 +10,12 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 const Payment = () => {
-
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     return (
         <section id="payments">
-            <div className='container'>
-                <SectionTitle>
-                    {t('payments.title')}
-                </SectionTitle>
+            <div className="container">
+                <SectionTitle>{t('payments.title')}</SectionTitle>
                 <ul className={styles.list}>
                     <li className={styles.item}>
                         <div className={styles.text}>
@@ -49,45 +46,24 @@ const Payment = () => {
                 </h3>
                 <ul className={styles.payment__list}>
                     <li className={styles.payment__item}>
-                        <Image
-                            src={Dollar}
-                            alt='dollar'
-                        />
-                        <p>
-                            {t('payments.item1')}
-                        </p>
+                        <Image src={Dollar} alt="dollar" />
+                        <p>{t('payments.item1')}</p>
                     </li>
                     <li className={styles.payment__item}>
-                        <Image
-                            src={Zondicons}
-                            alt='zondicons'
-                        />
-                        <p>
-                            {t('payments.item2')}
-                        </p>
+                        <Image src={Zondicons} alt="zondicons" />
+                        <p>{t('payments.item2')}</p>
                     </li>
                     <li className={styles.payment__item}>
-                        <Image
-                            src={Hero}
-                            alt='hero'
-                        />
-                        <p>
-                            {t('payments.item3')}
-                        </p>
+                        <Image src={Hero} alt="hero" />
+                        <p>{t('payments.item3')}</p>
                     </li>
                     <li className={styles.payment__item}>
-                        <Image
-                            src={Solar}
-                            alt='solar'
-                        />
-                        <p>
-                            {t('payments.item4')}
-                        </p>
+                        <Image src={Solar} alt="solar" />
+                        <p>{t('payments.item4')}</p>
                     </li>
                 </ul>
             </div>
         </section>
-
     )
 }
 

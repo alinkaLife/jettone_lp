@@ -18,6 +18,7 @@ import Provider13 from '../../../assets/icons/providers/image_13.svg'
 import Provider14 from '../../../assets/icons/providers/image_14.svg'
 import Provider15 from '../../../assets/icons/providers/image_15.svg'
 import { useTranslation } from 'next-i18next'
+
 const alt = 'logo of the partner'
 const providersList = [
     { id: 1, img: Provider1, alt },
@@ -38,18 +39,17 @@ const providersList = [
 ]
 
 const Providers = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation()
     return (
         <section id="partners">
-            <div className='container'>
-                <SectionTitle>
-                    {t('provider.title')}
-                </SectionTitle>
+            <div className="container">
+                <SectionTitle>{t('provider.title')}</SectionTitle>
                 <ul className={styles.list}>
-                    {providersList.map(provider => {
+                    {providersList.map((provider) => {
                         return (
                             <li key={provider.id} className={styles.item}>
-                                <Image className={styles.img}
+                                <Image
+                                    className={styles.img}
                                     src={provider.img}
                                     alt={provider.alt}
                                 />
@@ -57,7 +57,6 @@ const Providers = () => {
                         )
                     })}
                 </ul>
-
             </div>
         </section>
     )

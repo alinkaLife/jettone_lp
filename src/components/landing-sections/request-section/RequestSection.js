@@ -6,38 +6,27 @@ import { useTranslation } from 'next-i18next'
 
 import React from 'react'
 import Form from '@/components/sharable/form/Form'
-import { motion } from "framer-motion"
+import AnimatedImage from '@/components/sharable/animated-image/AnimatedImage'
 
 const RequestSection = () => {
-    const { t } = useTranslation();
-    const title = <SectionTitle>
-        {t('request.title')}
-    </SectionTitle>
+    const { t } = useTranslation()
+    const title = <SectionTitle>{t('request.title')}</SectionTitle>
 
     return (
         <section id="advantages">
-            <div className='container'>
+            <div className="container">
                 <div className={styles.main}>
-                    <div className={styles.isHidden}>
-                        {title}
-                    </div>
+                    <div className={styles.isHidden}>{title}</div>
 
                     <div className={styles.main__wrapper}>
-
                         <div className={styles.img__wrapper}>
-                            <motion.div
-                                initial={{ y: 180 }}
-                                whileInView={{ y: 0 }}
-                                transition={{ duration: 0.3, ease: 'easeOut' }}
-                                viewport={{ margin: '-40px' }}
-
-                            >
+                            <AnimatedImage>
                                 <Image
                                     src={imageForm}
-                                    alt='phoneImage'
+                                    alt="phoneImage"
                                     quality={100}
                                 />
-                            </motion.div>
+                            </AnimatedImage>
                         </div>
                         <div className={styles.form__block}>
                             <div className={styles.isVisibleOnTablet}>
@@ -47,8 +36,6 @@ const RequestSection = () => {
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
     )

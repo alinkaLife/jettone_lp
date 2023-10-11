@@ -12,10 +12,10 @@ import Picture6 from '../../../assets/icons/promo/icon7.svg'
 import Picture7 from '../../../assets/icons/promo/icon8.svg'
 import Img from '../../../assets/img/promo-image.webp'
 import { useTranslation } from 'next-i18next'
-import { motion } from 'framer-motion'
+import AnimatedImage from '@/components/sharable/animated-image/AnimatedImage'
 
 const Promo = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     const promoList = [
         { text: t('promo.item1'), icon: Picture },
@@ -29,46 +29,26 @@ const Promo = () => {
     ]
 
     return (
-        <section className={styles.promo} id='promo'>
-            <div className='container'>
-                <SectionTitle>
-                    {t('promo.title')}
-                </SectionTitle>
-                <p className={styles.text}>
-                    {t('promo.text')}
-                </p>
+        <section className={styles.promo} id="promo">
+            <div className="container">
+                <SectionTitle>{t('promo.title')}</SectionTitle>
+                <p className={styles.text}>{t('promo.text')}</p>
                 <div className={styles.main}>
                     <ul className={styles.list}>
                         {promoList.map((el, id) => {
                             return (
                                 <li key={`promo-${id}`} className={styles.item}>
-                                    <Image
-                                        src={el.icon}
-                                        alt='promo icon'
-                                    />
-                                    <span>
-                                        {el.text}
-                                    </span>
+                                    <Image src={el.icon} alt="promo icon" />
+                                    <span>{el.text}</span>
                                 </li>
                             )
                         })}
-
                     </ul>
                     <div className={styles.main__right}>
                         <div className={styles.image}>
-                            <motion.div
-                                initial={{ y: 180 }}
-                                whileInView={{ y: 0 }}
-                                transition={{ duration: 0.3, ease: 'easeOut' }}
-                                viewport={{ margin: '-40px' }}
-
-                            >
-                                <Image
-                                    src={Img}
-                                    alt='tablet'
-                                    quality={100}
-                                />
-                            </motion.div>
+                            <AnimatedImage>
+                                <Image src={Img} alt="tablet" quality={100} />
+                            </AnimatedImage>
                         </div>
                     </div>
                 </div>

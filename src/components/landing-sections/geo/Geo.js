@@ -13,42 +13,27 @@ const Geo = () => {
     const { t } = useTranslation()
     return (
         <section className={styles.geo}>
-            <div className='container'>
+            <div className="container">
                 <SectionTitle>{t('geo')}</SectionTitle>
                 <ul className={styles.list}>
                     <li>
-                        <Image
-                            src={ru}
-                            alt='flag of russia'
-                        />
+                        <Image src={ru} alt="flag of russia" />
                         <p>RU</p>
                     </li>
                     <li>
-                        <Image
-                            src={kz}
-                            alt='flag of kazakhstan'
-                        />
+                        <Image src={kz} alt="flag of kazakhstan" />
                         <p>KZ</p>
                     </li>
                     <li>
-                        <Image
-                            src={ua}
-                            alt='flag of ukraine'
-                        />
+                        <Image src={ua} alt="flag of ukraine" />
                         <p>UA</p>
                     </li>
                     <li>
-                        <Image
-                            src={az}
-                            alt='flag of azerbaijan'
-                        />
+                        <Image src={az} alt="flag of azerbaijan" />
                         <p>AZ</p>
                     </li>
                     <li>
-                        <Image
-                            src={uz}
-                            alt='flag of uzbekistan'
-                        />
+                        <Image src={uz} alt="flag of uzbekistan" />
                         <p>UZ</p>
                     </li>
                 </ul>

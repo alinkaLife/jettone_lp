@@ -10,72 +10,61 @@ import Open from '../../assets/icons/burger_menu_open.svg'
 import Close from '../../assets/icons/burger_menu_close.svg'
 import { useTranslation } from 'next-i18next'
 
-
-const Header = ({
-    handleModalOpen,
-    handleMobileToggle,
-    isMobileMenuOpen
-}) => {
-    const [isClient, setIsClient] = useState(false);
-    const { t } = useTranslation();
+const Header = ({ handleModalOpen, handleMobileToggle, isMobileMenuOpen }) => {
+    const [isClient, setIsClient] = useState(false)
+    const { t } = useTranslation()
 
     useEffect(() => {
         setIsClient(true)
     }, [])
 
-    const navigation = isClient ? <Nav
-        onNavClick={handleMobileToggle}
-    /> : <></>
+    const navigation = isClient ? (
+        <Nav onNavClick={handleMobileToggle} />
+    ) : (
+        <></>
+    )
 
     return (
-        <header
-            className={isMobileMenuOpen ? styles.header__fixed : undefined}
-        >
-            <div className='container'>
+        <header className={isMobileMenuOpen ? styles.header__fixed : undefined}>
+            <div className="container">
                 <div className={styles.header}>
-                    <Image
-                        priority={true}
-                        src={Logoicon}
-                        alt='logo'
-                    />
+                    <Image priority={true} src={Logoicon} alt="logo" />
                     <div className={styles.nav__wrapper}>
                         <Image
                             priority={true}
                             onClick={handleMobileToggle}
                             className={styles.burger}
                             src={isMobileMenuOpen ? Close : Open}
-                            alt='burger menu closed'
+                            alt="burger menu closed"
                         />
-                        <div className={styles.isHidden}>
-                            {navigation}
-                        </div>
-                        <Button onClick={handleModalOpen} type='secondary'>
+                        <div className={styles.isHidden}>{navigation}</div>
+                        <Button onClick={handleModalOpen} type="secondary">
                             {t('request')}
                         </Button>
                         <DesktopLangSwitcher />
                     </div>
                 </div>
-
             </div>
-            {
-                isMobileMenuOpen && (
-                    <div className={styles.mobile__menu}>
-                        <div style={{ minHeight: '100%', display: 'flex' }} className='container'>
-                            <div className={styles.mobile__wrapper}>
-                                <div style={{ paddingBottom: '20px' }}>
-                                    {navigation}
-                                    <div className={styles.btn} >
-                                        <Button onClick={handleModalOpen}>
-                                            {t('request')}
-                                        </Button>
-                                    </div>
+            {isMobileMenuOpen && (
+                <div className={styles.mobile__menu}>
+                    <div
+                        style={{ minHeight: '100%', display: 'flex' }}
+                        className="container"
+                    >
+                        <div className={styles.mobile__wrapper}>
+                            <div style={{ paddingBottom: '20px' }}>
+                                {navigation}
+                                <div className={styles.btn}>
+                                    <Button onClick={handleModalOpen}>
+                                        {t('request')}
+                                    </Button>
                                 </div>
-                                <MobileLangSwitcher />
                             </div>
+                            <MobileLangSwitcher />
                         </div>
                     </div>
-                )
-            }
+                </div>
+            )}
         </header>
     )
 }

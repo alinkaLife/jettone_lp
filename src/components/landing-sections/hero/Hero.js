@@ -1,7 +1,7 @@
-import styles from '../hero/Hero.module.css';
+import styles from '../hero/Hero.module.css'
 import Image from 'next/image'
 import React from 'react'
-import Button from '../../sharable/button/button';
+import Button from '../../sharable/button/button'
 import { useTranslation } from 'next-i18next'
 import icon5 from '@/assets/hero/coin5.png'
 import icon1 from '@/assets/hero/coin1.png'
@@ -10,7 +10,7 @@ import icon3 from '@/assets/hero/coin3.png'
 import icon4 from '@/assets/hero/coin4.png'
 
 const Hero = ({ isMobileMenuOpen, handleModalOpen }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation()
 
     const image = (
         <div
@@ -22,7 +22,7 @@ const Hero = ({ isMobileMenuOpen, handleModalOpen }) => {
                 className={[styles.img__five, 'animated'].join(' ')}
                 priority={true}
                 src={icon5}
-                alt='coins icon'
+                alt="coins icon"
                 quality={100}
             />
             <Image
@@ -30,7 +30,7 @@ const Hero = ({ isMobileMenuOpen, handleModalOpen }) => {
                 className={[styles.img__one, 'animated__delay'].join(' ')}
                 priority={true}
                 src={icon1}
-                alt='coins icon'
+                alt="coins icon"
                 quality={100}
             />
             <Image
@@ -38,7 +38,7 @@ const Hero = ({ isMobileMenuOpen, handleModalOpen }) => {
                 className={[styles.img__two, 'animated'].join(' ')}
                 priority={true}
                 src={icon2}
-                alt='coins icon'
+                alt="coins icon"
                 quality={100}
             />
             <Image
@@ -46,7 +46,7 @@ const Hero = ({ isMobileMenuOpen, handleModalOpen }) => {
                 className={[styles.img__three, 'animated'].join(' ')}
                 priority={true}
                 src={icon3}
-                alt='coins icon'
+                alt="coins icon"
                 quality={100}
             />
             <Image
@@ -54,34 +54,28 @@ const Hero = ({ isMobileMenuOpen, handleModalOpen }) => {
                 className={[styles.img__four, 'animated__delay'].join(' ')}
                 priority={true}
                 src={icon4}
-                alt='coins icon'
+                alt="coins icon"
                 quality={100}
             />
         </div>
     )
 
     return (
-        <section className={styles.hero__section} id='hero'>
-            <div className='container'>
+        <section className={styles.hero__section} id="hero">
+            <div className="container">
                 <div className={styles.hero}>
                     <div className={styles.hero__wrapper}>
                         <div className={styles.hero__left}>
-                            <h1 className={styles.title}>
-                                {t('hero.title')}
-                            </h1>
+                            <h1 className={styles.title}>{t('hero.title')}</h1>
                             <h2 className={styles.description}>
                                 {t('hero.description')}
                             </h2>
-                            <div className={styles.img__wrapper}>
-                                {image}
-                            </div>
+                            <div className={styles.img__wrapper}>{image}</div>
                             <Button onClick={handleModalOpen}>
                                 {t('hero.btn')}
                             </Button>
                         </div>
-                        <div className={styles.hero__right}>
-                            {image}
-                        </div>
+                        <div className={styles.hero__right}>{image}</div>
                     </div>
                 </div>
             </div>
