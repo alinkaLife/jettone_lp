@@ -3,11 +3,11 @@ import Image from 'next/image'
 import React from 'react'
 import Button from '../../sharable/button/button'
 import { useTranslation } from 'next-i18next'
-import icon5 from '@/assets/hero/coin5.png'
-import icon1 from '@/assets/hero/coin1.png'
-import icon2 from '@/assets/hero/coin2.png'
-import icon3 from '@/assets/hero/coin3.png'
-import icon4 from '@/assets/hero/coin4.png'
+import icon5 from '@/assets/hero/coin5.webp'
+import icon1 from '@/assets/hero/coin1.webp'
+import icon2 from '@/assets/hero/coin2.webp'
+import icon3 from '@/assets/hero/coin3.webp'
+import icon4 from '@/assets/hero/coin4.webp'
 
 const Hero = ({ isMobileMenuOpen, handleModalOpen }) => {
     const { t } = useTranslation()
