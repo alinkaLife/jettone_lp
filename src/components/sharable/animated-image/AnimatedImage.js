@@ -1,12 +1,16 @@
-import useOnScreen from '@/services/useOnScreen'
-import React, { useRef } from 'react'
+import React from 'react'
+import { useInView } from 'react-intersection-observer'
 
 const AnimatedImage = ({ children }) => {
-    const ref = useRef(null)
-    const isVisible = useOnScreen(ref)
+    const { ref, inView } = useInView({ triggerOnce: true })
 
     return (
-        <div className={isVisible ? 'animated__shaking' : ''} ref={ref}>
+        <div
+            className={
+                inView ? 'animated__shaking' : 'animated__shaking__start'
+            }
+            ref={ref}
+        >
             {children}
         </div>
     )

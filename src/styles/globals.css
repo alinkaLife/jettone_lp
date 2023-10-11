@@ -122,10 +122,13 @@ footer {
   animation-direction: alternate;
 }
 
+.animated__shaking__start {
+  transform: translateY(100px);
+}
+
 .animated__shaking {
   animation: shaking 1.5s ease-out;
 }
-
 
 @keyframes pulsate {
   0% {

@@ -3,12 +3,10 @@ import styles from '../expandable-list/expandable.module.css'
 import ArrowIcon from '../../../assets/icons/arrow.svg'
 import Image from 'next/image'
 
-
 const Expandable = ({ title, description }) => {
-
     const [open, setOpen] = useState(false)
 
-    const iconClasses = [styles.icon];
+    const iconClasses = [styles.icon]
     if (open) {
         iconClasses.push(styles.icon__open)
     }
@@ -29,10 +27,13 @@ const Expandable = ({ title, description }) => {
                     alt="expandable icon"
                 />
             </div>
-            {open ? <div className={styles.description}>{description}</div> : <></>}
+            {open ? (
+                <div className={styles.description}>{description}</div>
+            ) : (
+                <></>
+            )}
         </li>
     )
-
 }
 
 export default Expandable

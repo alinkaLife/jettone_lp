@@ -10,7 +10,9 @@ const Input = ({ placeholder, name, register, errors }) => {
                 className={styles.input}
                 {...register(name)}
             />
-            {errors[name] && <p style={{ color: 'red' }}>{errors[name].message}</p>}
+            {errors[name] && (
+                <p style={{ color: 'red' }}>{errors[name].message}</p>
+            )}
         </div>
     )
 }
