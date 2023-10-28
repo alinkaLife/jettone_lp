@@ -1,15 +1,14 @@
 .btn {
-    padding: 16px 32px;
-    width: 100%;
+    padding: 10px 20px;
     cursor: pointer;
-
     border-radius: var(--border-radius-large);
-    font-family: inherit;
+    color: #EBEBEC;
+    font-family: Rubik;
     font-size: 14px;
-    color: var(--color-1-white, #FFF);
-    text-align: center;
-    line-height: 16px;
-
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
     transition: all 500ms ease-out;
 }
 
@@ -20,6 +19,15 @@
 .btn__base {
     border: 1px solid var(--gradient-main-border);
     background: var(--color-1-gradient-main-fill);
+    display: flex;
+    min-height: 56px;
+    padding: 16px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 40px;
+    background: linear-gradient(84deg, #6B40EA -0.06%, #00A3FF 99.94%);
+    box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.32) inset;
 }
 
 .btn__base:hover {
@@ -27,33 +35,13 @@
     box-shadow: 0px 4px 20px 0px rgba(7, 139, 221, 0.60);
 }
 
-.btn__secondary {
-    transition: all 500ms ease-out;
-    display: inline-block;
-    position: relative;
-    background: transparent;
-    border: none;
-}
 
-.btn__secondary::before {
-    transition: all 500ms ease-out;
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 2px;
-    border-radius: 9999px;
-    background: var(--gradient-main-fill);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-}
-
-.btn__secondary:hover {
-    transition: all 500ms ease-out;
-    background: var(--gradient-main-fill);
+@media screen and (min-width: 1300px) {
+    .btn {
+        color: #EBEBEC;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.18px;
+    }
 }

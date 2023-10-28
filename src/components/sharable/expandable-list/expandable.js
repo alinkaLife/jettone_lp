@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../expandable-list/expandable.module.css'
-import ArrowIcon from '../../../assets/icons/arrow.svg'
+import IconPlus from '../../../assets/icons/faq/plus.svg'
+import IconMinus from '../../../assets/icons/faq/minus.svg'
 import Image from 'next/image'
 
 const Expandable = ({ title, description }) => {
@@ -18,14 +19,14 @@ const Expandable = ({ title, description }) => {
                 }}
                 className={styles.item__top}
             >
-                <p className={styles.title}>{title}</p>
                 <Image
                     className={iconClasses.join(' ')}
-                    src={ArrowIcon}
+                    src={open ? IconMinus : IconPlus}
                     width={16}
                     height={16}
                     alt="expandable icon"
                 />
+                <p className={styles.title}>{title}</p>
             </div>
             {open ? (
                 <div className={styles.description}>{description}</div>

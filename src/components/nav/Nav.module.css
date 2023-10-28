@@ -1,24 +1,24 @@
 .nav__list {
     display: flex;
-    flex-direction: column;
 }
 
 .nav__list>li>a {
     display: block;
-    padding: 14px;
-    color: var(--color-1-white);
-    text-align: center;
+    padding: 6px 14px;
+    color: #EBEBEC;
     font-family: Rubik;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
-    background: var(--color-1-background-2);
+
+    border-radius: 40px;
+    background: rgba(60, 71, 139, 0.32);
     transition: all 500ms ease-out;
 }
 
 .nav__list>li>a:hover {
-        transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
     cursor: pointer;
     background: var(--color-1-background-3);
 }
@@ -29,10 +29,6 @@
 
 
 @media screen and (min-width: 1300px) {
-    .nav__list>li>a {
-        padding: 30px 16px;
-    }
-
     .nav__list {
         flex-direction: row;
     }

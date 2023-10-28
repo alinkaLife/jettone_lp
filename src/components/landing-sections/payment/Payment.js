@@ -1,10 +1,10 @@
 import SectionTitle from '../../sharable/section-title/SectionTitle'
 import styles from './Payment.module.css'
 import Image from 'next/image'
-import Dollar from '../../../assets/icons/payments/profit.svg'
-import Zondicons from '../../../assets/icons/payments/zondicons_network.svg'
-import Hero from '../../../assets/icons/payments/heroicons_user-group-20-solid.svg'
-import Solar from '../../../assets/icons/payments/solar_share-bold.svg'
+import Dollar from '../../../assets/icons/payment_advantages/1.svg'
+import Zondicons from '../../../assets/icons/payment_advantages/2.svg'
+import Hero from '../../../assets/icons/payment_advantages/3.svg'
+import Solar from '../../../assets/icons/payment_advantages/4.svg'
 import { useTranslation } from 'next-i18next'
 
 import React from 'react'
@@ -13,30 +13,36 @@ const Payment = () => {
     const { t } = useTranslation()
 
     return (
-        <section id="payments">
+        <section className={styles.payment__section} id="payments">
             <div className="container">
-                <SectionTitle>{t('payments.title')}</SectionTitle>
-                <ul className={styles.list}>
-                    <li className={styles.item}>
-                        <div className={styles.text}>
-                            {t('payments.title1')}
-                        </div>
-                        <div className={styles.delivery}>
-                            {t('payments.soon')}
-                        </div>
+                <SectionTitle
+                    title={'Payment Models'}
+                    topTitle={'Payment Models '}
+                />
+                <ul className={styles.main__list}>
+                    <li className={styles.main__list_item}>
+                        <div className={styles.when}>coming soon</div>
+                        <h4 className={styles.text}>CPA</h4>
+                        <p className={styles.about}>{t('payment.model2')}</p>
                     </li>
-                    <li className={[styles.item, styles.center].join(' ')}>
-                        <div className={styles.text}>
-                            {t('payments.title2')}
-                        </div>
+                    <li
+                        className={[
+                            styles.main__list_item,
+                            styles.main__list_item_second,
+                        ].join(' ')}
+                    >
+                        <h4 className={styles.text}>RevShare</h4>
+                        <p className={styles.about}>{t('payment.model3')}</p>
                     </li>
-                    <li className={styles.item}>
-                        <div className={styles.text}>
-                            {t('payments.title3')}
-                        </div>
-                        <div className={styles.delivery}>
-                            {t('payments.soon')}
-                        </div>
+                    <li
+                        className={[
+                            styles.main__list_item,
+                            styles.main__list_item_last,
+                        ].join(' ')}
+                    >
+                        <div className={styles.when}>coming soon</div>
+                        <h4 className={styles.text}>Hybrid</h4>
+                        <p className={styles.about}>{t('payment.model1')}</p>
                     </li>
                 </ul>
                 <h3 className={styles.section__subtitle}>
@@ -44,22 +50,23 @@ const Payment = () => {
                     <span>{` ${t('payments.subtitle2')} `}</span>
                     {t('payments.subtitle3')}
                 </h3>
+
                 <ul className={styles.payment__list}>
                     <li className={styles.payment__item}>
                         <Image src={Dollar} alt="dollar" />
-                        <p>{t('payments.item1')}</p>
+                        <p className={styles.wow}>{t('payments.item1')}</p>
                     </li>
                     <li className={styles.payment__item}>
                         <Image src={Zondicons} alt="zondicons" />
-                        <p>{t('payments.item2')}</p>
+                        <p className={styles.wow}>{t('payments.item2')}</p>
                     </li>
                     <li className={styles.payment__item}>
                         <Image src={Hero} alt="hero" />
-                        <p>{t('payments.item3')}</p>
+                        <p className={styles.wow}>{t('payments.item4')}</p>
                     </li>
                     <li className={styles.payment__item}>
                         <Image src={Solar} alt="solar" />
-                        <p>{t('payments.item4')}</p>
+                        <p className={styles.wow}>{t('payments.item3')}</p>
                     </li>
                 </ul>
             </div>

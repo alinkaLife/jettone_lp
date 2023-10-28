@@ -1,48 +1,111 @@
-.input {
-    border-radius: var(--border-radius-small);
-    border: 1px solid var(--color-1-border-1);
-    background: var(--color-1-background-1);
-    font-family: inherit;
+.input__wrapper {
+    position: relative;
+}
 
-    font-size: 14px;
+.label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    background: transparent;
+    color: #8D93BD;
+    transition: all 500ms;
+}
+
+.input:focus+.label {
+    top: 0px;
+    background: #242775;
+    left: 15px;
+    transition: all 500ms;
+    padding: 0px 5px;
+
+    color: #EBEBEC;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+}
+
+.input:not(:placeholder-shown)+.label {
+    top: 0px;
+    background: #242775;
+    left: 15px;
+    transition: all 500ms;
+    padding: 0px 5px;
+
+    color: #EBEBEC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+}
+
+.input:not(:placeholder-shown) {
+    background: #242775;
+    border: 2px solid white;
+}
+
+.input:focus {
+    background: #242775;
+    border: 2px solid white;
+    outline: none;
+}
+
+.input:focus(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}
+
+.input {
+    border-radius: 80px;
+    border: 2px solid transparent;
+    background: #101745;
+    font-family: inherit;
+
+    color: #EBEBEC;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.16px;
 
     min-height: 40px;
     padding: 14px 16px;
 
     width: 100%;
 
-    color: var(--color-1-white);
+    outline: none;
+    cursor: pointer;
 }
 
-.input::placeholder {
-    color: var(--color-1-text-1);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-}
-
-.input:focus::placeholder {
-    color: var(--color-1-white);
-}
 
 @media screen and (min-width: 744px) {
     .input {
-        padding: 10px 16px;
-    }
-}
-
-@media screen and (min-width: 744px) {
-    .input {
-        min-height: 48px;
+        min-height: 56px;
         color: var(--white, #FFF);
         font-family: Rubik;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 20px;
-        /* 142.857% */
+        padding: 10px 16px;
     }
+}
+
+@media screen and (min-width: 1300px) {
+    .label {
+
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+    }
+
+    .input {
+        min-height: 64px;
+    }
+
 }

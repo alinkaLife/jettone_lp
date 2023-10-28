@@ -2,14 +2,14 @@ import SectionTitle from '../../sharable/section-title/SectionTitle'
 import styles from './Promo.module.css'
 import Image from 'next/image'
 import React from 'react'
-import Picture from '../../../assets/icons/promo/icon1.svg'
-import Picture1 from '../../../assets/icons/promo/icon2.svg'
-import Picture2 from '../../../assets/icons/promo/icon3.svg'
-import Picture3 from '../../../assets/icons/promo/icon4.svg'
-import Picture4 from '../../../assets/icons/promo/icon5.svg'
-import Picture5 from '../../../assets/icons/promo/icon6.svg'
-import Picture6 from '../../../assets/icons/promo/icon7.svg'
-import Picture7 from '../../../assets/icons/promo/icon8.svg'
+import Picture from '../../../assets/icons/promo/1.svg'
+import Picture1 from '../../../assets/icons/promo/2.svg'
+import Picture2 from '../../../assets/icons/promo/3.svg'
+import Picture3 from '../../../assets/icons/promo/4.svg'
+import Picture4 from '../../../assets/icons/promo/5.svg'
+import Picture5 from '../../../assets/icons/promo/6.svg'
+import Picture6 from '../../../assets/icons/promo/7.svg'
+import Picture7 from '../../../assets/icons/promo/8.svg'
 import Img from '../../../assets/img/promo-image.webp'
 import { useTranslation } from 'next-i18next'
 import AnimatedImage from '@/components/sharable/animated-image/AnimatedImage'
@@ -31,26 +31,26 @@ const Promo = () => {
     return (
         <section className={styles.promo} id="promo">
             <div className="container">
-                <SectionTitle>{t('promo.title')}</SectionTitle>
+                <SectionTitle
+                    title={'Boost Earnings with Our Affiliate Program!'}
+                    topTitle={'Promo '}
+                />
+
                 <p className={styles.text}>{t('promo.text')}</p>
                 <div className={styles.main}>
                     <ul className={styles.list}>
                         {promoList.map((el, id) => {
                             return (
                                 <li key={`promo-${id}`} className={styles.item}>
-                                    <Image src={el.icon} alt="promo icon" />
-                                    <span>{el.text}</span>
+                                    <div className={styles.image_wrapper}>
+                                        <Image src={el.icon} alt="promo icon" />
+                                    </div>
+                                    <span className={styles.textItem}>{el.text}</span>
                                 </li>
                             )
                         })}
                     </ul>
-                    <div className={styles.main__right}>
-                        <div className={styles.image}>
-                            <AnimatedImage>
-                                <Image src={Img} alt="tablet" quality={100} />
-                            </AnimatedImage>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </section>

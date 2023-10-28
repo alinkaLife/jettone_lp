@@ -6,8 +6,10 @@
     "nav.partners": "Partners",
     "nav.faq": "FAQ",
 
-    "hero.title": "JetTon Affiliate Program",
-    "hero.description": "Licensed casino #1 on the Telegram Games platform",
+    "hero.title": "Affiliate Program",
+    "hero.title.top": "JetTon",
+    "hero.description.start": "Licensed casino #1 on the",
+    "hero.description": "Telegram Games platform",
     "hero.btn": "Join Now",
 
     "payments.title": "Payment Models",
@@ -18,6 +20,9 @@
     "payments.subtitle1": "Advantages",
     "payments.subtitle2": "RevShare",
     "payments.subtitle3": "Models",
+    "payment.model1": "Hybrid includes two types of compensation: RevShare and CPA. This approach allows partners to receive a fixed reward according to the CPA model, as well as an additional percentage of the company's profit based on RevShare.",
+    "payment.model2": "CPA stands for 'Cost Per Action', within which payment is made for specific user actions. These actions may include, for example, website clicks, registrations, or making a deposit.",
+    "payment.model3": "RevShare is a type of affiliate system where webmasters receive a share of the total revenue. For example, people can invite referrals to an online casino and earn a percentage of their activity.",
     "payments.item1": "Steady passive income - the opportunity to earn a percentage as long as the platform continues its operation.",
     "payments.item2": "Traffic sources are virtually unlimited - the key is to keep the users you've attracted playing actively.",
     "payments.item3": "Targeting can be very useful - by working on the target audience, you can increase your profit even more.",
@@ -51,22 +56,28 @@
 
     "footer.title": "Support",
     "advantages.title": "Why JetTon Partners is Beneficial?",
+    
     "advantages.item1": "3 times higher retention compared to regular casinos.",
-    "advantages.item2": "No needed for user registration.",
-    "advantages.item3": "Web view module for integration into applications.",
-    "advantages.item4": "Convenient and user-friendly interface.",
-    "advantages.item5": "#1 Telegram casino in terms of conversion.",
-    "advantages.item6": "Promotional materials for partners.",
-    "advantages.item7": "A wide range of payment methods for deposits and withdrawals.",
+    "advantages.item2": "#1 Telegram casino in terms of conversion.",
+
+    "advantages.item3": "No needed for user registration.",
+    "advantages.item4": "Promotional materials for partners.",
+
+    "advantages.item5": "Web view module for integration into applications.",
+    "advantages.item6": "A wide range of payment methods for deposits and withdrawals.",
+
+    "advantages.item7": "Convenient and user-friendly interface.",
     "advantages.item8": "A product from the globally recognized Ton team.",
 
     "form.item1": "Nickname",
-    "form.item2": "Telegram",
-    "form.item3": "Source",
-    "form.item4": "Email",
-    "form.send": "Send",
+    "form.item2": "E-mail",
+    "form.item3": "Telegram",
+    "form.item4": "Source",
+    "form.send": "Send Request",
 
     "call-to-action": "Join to JetTon Partners",
     "geo": "GEO",
-    "request": "Apply now"
+    "request": "Apply now",
+
+    "faq": "Frequently Asked Questions"
 }

@@ -1,39 +1,56 @@
 .promo {
-    padding-top: 0px;
+    background-image: url(../../../assets/img/union_right.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 83px 369px;
+    position: relative;
+    z-index: 2;
 }
 
 .text {
-    color: var(--color-1-white);
+    color: #8D93BD;
+
     text-align: center;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.textItem {
+    color: #EBEBEC;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 12px;
 }
 
 .list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
-    gap: 16px;
+    gap: 12px;
 }
 
 .item {
-    border-radius: var(--border-radius-small);
-    border: 1px solid var(--color-1-border-1);
-    background: var(--color-1-background-3);
-
-    padding: 12px;
-
     display: flex;
+    /* min-width: 146px; */
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+
+    border-radius: 24px;
+    border-top: 1px solid #383C9A;
+    background: #242775;
+    box-shadow: 0px 4px 20px -8px rgba(5, 8, 25, 0.40);
+}
+
+.image_wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
-
-    font-size: 10px;
-    line-height: 12px;
-
-    cursor: pointer;
-    transition: all 250ms ease-in;
-
-    color: var(--color-1-white);
 }
 
 .item:hover {
@@ -52,30 +69,35 @@
 }
 
 .main {
-    margin-top: 40px;
+    margin-top: 24px;
 }
 
 @media screen and (min-width: 744px) {
 
     .text {
+        color: #8D93BD;
+        text-align: center;
         font-size: 14px;
-        line-height: 20px;
+        font-weight: 400;
+        line-height: 160%;
     }
 
     .list {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 40px);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 120px);
     }
 
     .item {
+        /* min-width: 169px; */
+        min-height: 119px;
         padding: 12px 16px;
         font-size: 12px;
         line-height: 16px;
     }
 
     .item img {
-        width: 16px;
-        height: 16px;
+        width: 40px;
+        height: 40px;
     }
 
     .image {
@@ -88,17 +110,10 @@
     }
 
     .main {
-        display: grid;
+        /* display: grid;
         grid-template-columns: 220px auto;
-        gap: 20px
+        gap: 20px */
     }
-
-    .main__right {
-        padding-left: 40px;
-        display: flex;
-      align-items: center;
-    }
-
 }
 
 @media screen and (min-width: 1300px) {
@@ -108,16 +123,8 @@
     }
 
     .list {
-        grid-template-rows: repeat(8, 50px);
-    }
-
-    .main {
-        grid-template-columns: 380px auto;
-        gap: 120px
-    }
-
-    .main__right {
-        padding-left: 0px;
+        grid-template-rows: repeat(2, 170px);
+        gap: 40px;
     }
 
     .image {
@@ -128,16 +135,39 @@
         max-width: 580px;
         margin-left: auto;
         margin-right: auto;
+        color: #8D93BD;
+
+        text-align: center;
+        font-family: Rubik;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
     }
 
     .item {
-        padding: 18px 20px;
+        /* min-width: 290px; */
+        min-height: 190px;
+        padding: 32px;
         font-size: 12px;
         line-height: 16px;
     }
 
     .item img {
-        width: 20px;
-        height: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .textItem {
+        margin-top: 16px;
+        color: #EBEBEC;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    .image_wrapper {
+        width: 59px;
+        height: 59px;
     }
 }

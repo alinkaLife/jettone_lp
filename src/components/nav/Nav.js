@@ -5,7 +5,7 @@ import styles from './Nav.module.css'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 
-const Nav = ({ onNavClick }) => {
+const Nav = () => {
     const router = useRouter()
     const { t } = useTranslation()
 
@@ -59,7 +59,6 @@ const Nav = ({ onNavClick }) => {
                                 className={
                                     nav.isActive ? styles.active : undefined
                                 }
-                                onClick={onNavClick}
                                 href={`/#${nav.hash}`}
                             >
                                 {nav.label}

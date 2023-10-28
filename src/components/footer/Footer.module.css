@@ -1,3 +1,10 @@
+.footer {
+    background-image: url(../../assets/img/union_bottom.png);
+    background-repeat: no-repeat;
+    /* background-size: 83px 369px; */
+    background-position: 70% 50%;
+}
+
 .name {
     color: var(--color-1-white);
     font-size: 20px;
@@ -10,7 +17,6 @@
     border-radius: 30px;
     border: 1px solid var(--color-1-border-1);
     background: var(--color-1-background-2);
-
     display: flex;
     padding: 12px;
     justify-content: center;
@@ -39,16 +45,20 @@
 }
 
 .company {
-    margin-top: 48px;
+    /* margin-top: 48px; */
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 16px;
+    margin-top: -32px;
 }
 
 .company>p {
-    color: var(--color-1-white);
-    line-height: 24px;
+    color: #8D93BD;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
 }
 
 @media screen and (min-width: 744px) {
@@ -64,8 +74,10 @@
     }
 
     .company {
+        display: flex;
+        justify-content: center;
         margin-top: 0px;
-        align-items: flex-start;
+        align-items: center;
         gap: 32px
     }
 

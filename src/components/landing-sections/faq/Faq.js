@@ -37,7 +37,8 @@ const Faq = () => {
     return (
         <section id="faq">
             <div className="container">
-                <SectionTitle>F.A.Q.</SectionTitle>
+                <SectionTitle title={t('faq')} topTitle={'F.A.Q.'} />
+
                 <ul className={styles.list}>
                     {faqList.map((el) => {
                         return (

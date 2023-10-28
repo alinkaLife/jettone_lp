@@ -4,8 +4,9 @@ import Form from '@/components/sharable/form/Form'
 import Modal from '@mui/material/Modal'
 import styles from './RequestModal.module.css'
 import Image from 'next/image'
-import CloseIcon from '@/assets/icons/burger_menu_close.svg'
+import CloseIcon from '@/assets/icons/hamburger_open.svg'
 import { useTranslation } from 'next-i18next'
+import Fade from '@mui/material/Fade'
 
 const RequestModal = ({ handleToggleModal, isRequestModalOpen }) => {
     const { t } = useTranslation()
@@ -16,23 +17,25 @@ const RequestModal = ({ handleToggleModal, isRequestModalOpen }) => {
             className={styles.modal}
             open={isRequestModalOpen}
         >
-            <div className={styles.modal__wrapper}>
-                <div className={styles.modal__content}>
-                    <Image
-                        className={styles.close}
-                        onClick={handleToggleModal}
-                        src={CloseIcon}
-                        alt="close icon"
-                    />
+            <Fade  in={isRequestModalOpen}>
+                <div className={styles.modal__wrapper}>
+                    <div className={styles.modal__content}>
+                        <Image
+                            className={styles.close}
+                            onClick={handleToggleModal}
+                            src={CloseIcon}
+                            alt="close icon"
+                        />
 
-                    <SectionTitle>{t('call-to-action')}</SectionTitle>
-                    <Form
-                        onFormSubmit={() => {
-                            handleToggleModal()
-                        }}
-                    />
+                        <SectionTitle title={t('call-to-action')} />
+                        <Form
+                            onFormSubmit={() => {
+                                handleToggleModal()
+                            }}
+                        />
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </Modal>
     )
 }

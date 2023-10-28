@@ -1,32 +1,95 @@
-.title {
-    color: var(--color-1-white);
-    text-align: center;
-    font-size: 20px !important;
-    line-height: 24px !important;
+.title__wrapper {
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
 }
 
-.title::after {
-    content: " ";
-    display: block;
+.title {
+    color: #EBEBEC;
+    text-align: center;
+    text-shadow: 0px 1px 8px rgba(5, 8, 25, 0.16);
+    font-family: Rubik;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 33.6px */
+    letter-spacing: -0.28px;
 
-    width: 160px;
-    height: 2px;
+    margin-bottom: 0px;
+}
 
-    margin: 20px auto 0px auto;
-    margin-top: 20px;
-    background: linear-gradient(90deg, #6B40EA 0%, #019DF0 100%);
+.top {
+    color: #1096FC;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 16.8px */
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
 }
 
 @media screen and (min-width:744px) {
     .title {
-        font-size: 24px !important;
-        line-height: 32px !important;
+        color: #EBEBEC;
+        text-align: center;
+        text-shadow: 0px 1px 8px rgba(5, 8, 25, 0.16);
+        font-family: Rubik;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        /* 33.6px */
+        letter-spacing: -0.28px;
+    }
+
+    .top {
+        color: #1096FC;
+        text-align: center;
+        font-family: Rubik;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
     }
 }
 
 @media screen and (min-width:1300px) {
     .title {
-        font-size: 32px !important;
-        line-height: 40px !important;
+        color: #EBEBEC;
+        text-align: center;
+        text-shadow: 0px 1px 8px rgba(5, 8, 25, 0.16);
+        font-family: Rubik;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        /* 67.2px */
+        letter-spacing: -0.56px;
+    }
+
+    .top {
+        color: #1096FC;
+        text-align: center;
+        font-family: Rubik;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 19.2px */
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+    }
+
+    .title__wrapper {
+        margin-bottom: 40px;
     }
 }

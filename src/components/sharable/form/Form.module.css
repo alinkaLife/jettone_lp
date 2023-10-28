@@ -4,3 +4,17 @@
 
     margin-bottom: 24px;
 }
+
+.btn {
+    width: 100%;
+}
+
+@media screen and (min-width:1300px) {
+    .btn {
+        width: auto;
+    }
+
+    .input {
+        margin-bottom: 40px;
+    }
+}

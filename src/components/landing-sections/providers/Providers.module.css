@@ -1,24 +1,32 @@
+.providers__section {
+    background-image: url(../../../assets/img/union_left.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 83px 369px;
+}
+
 .list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 16px;
+    grid-template-rows: repeat(5, 64px);
+    grid-gap: 12px;
 }
 
 .item {
-    border-radius: 16px;
-    border: 1px solid var(--color-1-border-1, #3D4987);
-    background: var(--color-1-background-3, #2E3869);
-    padding: 19px 14px;
+    border-radius: 24px;
+    border-top: 1px solid #383C9A;
+
+    background: #242775;
+    padding: 24px 16px;
+
+    box-shadow: 0px 4px 20px -8px rgba(5, 8, 25, 0.40);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.item img {
-    width: 80px;
-    height: 41px;
-}
+
+
 
 @media screen and (min-width:744px) {
     .list {
@@ -28,17 +36,86 @@
         grid-template-rows: 1fr 1fr 1fr;
     }
 
-    .item img {
-        width: 100px;
-        height: 52px;
-    }
-
 }
+
 @media screen and (min-width:1300px) {
-    
-    .item img {
-        width: 120px;
-        height: 62px;
+
+    .list {
+        margin-top: 40px;
     }
 
+    .item:nth-child(1) img {
+        width: 126px;
+        height: 60px;
+    }
+
+    .item:nth-child(2) img {
+        width: 135px;
+        height: 29.26px;
+    }
+
+    .item:nth-child(3) img {
+        width: 140px;
+        height: 22.615px;
+    }
+
+    .item:nth-child(4) img {
+        width: 138px;
+        height: 26.766px;
+    }
+
+    .item:nth-child(5) img {
+        width: 138px;
+        height: 38.588px;
+    }
+
+    .item:nth-child(6) img {
+        width: 141px;
+        height: 63.851px;
+    }
+
+    .item:nth-child(7) img {
+        width: 69.415px;
+        height: 71px;
+    }
+
+    .item:nth-child(8) img {
+        width: 142px;
+        height: 35.486px;
+    }
+
+    .item:nth-child(9) img {
+        width: 139px;
+        height: 34.247px;
+    }
+
+    .item:nth-child(10) img {
+        width: 130px;
+        height: 36.666px;
+    }
+
+    .item:nth-child(11) img {
+        width: 140px;
+        height: 34.054px;
+    }
+
+    .item:nth-child(12) img {
+        width: 128px;
+        height: 41.275px;
+    }
+
+    .item:nth-child(13) img {
+        width: 131px;
+        height: 46.066px;
+    }
+
+    .item:nth-child(14) img {
+        width: 134px;
+        height: 29.549px;
+    }
+
+    .item:nth-child(15) img {
+        width: 147px;
+        height: 27.087px;
+    }
 }

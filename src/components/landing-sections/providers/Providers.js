@@ -2,21 +2,21 @@ import React from 'react'
 import Image from 'next/image'
 import SectionTitle from '../../sharable/section-title/SectionTitle'
 import styles from './Providers.module.css'
-import Provider1 from '../../../assets/icons/providers/image_1.svg'
-import Provider2 from '../../../assets/icons/providers/image_2.svg'
-import Provider3 from '../../../assets/icons/providers/image_3.svg'
-import Provider4 from '../../../assets/icons/providers/image_4.svg'
-import Provider5 from '../../../assets/icons/providers/image_5.svg'
-import Provider6 from '../../../assets/icons/providers/image_6.svg'
-import Provider7 from '../../../assets/icons/providers/image_7.svg'
-import Provider8 from '../../../assets/icons/providers/image_8.svg'
-import Provider9 from '../../../assets/icons/providers/image_9.svg'
-import Provider10 from '../../../assets/icons/providers/image_10.svg'
-import Provider11 from '../../../assets/icons/providers/image_11.svg'
-import Provider12 from '../../../assets/icons/providers/image_12.svg'
-import Provider13 from '../../../assets/icons/providers/image_13.svg'
-import Provider14 from '../../../assets/icons/providers/image_14.svg'
-import Provider15 from '../../../assets/icons/providers/image_15.svg'
+import Provider1 from '../../../assets/icons/providers/1.svg'
+import Provider2 from '../../../assets/icons/providers/2.svg'
+import Provider3 from '../../../assets/icons/providers/3.svg'
+import Provider4 from '../../../assets/icons/providers/4.svg'
+import Provider5 from '../../../assets/icons/providers/5.svg'
+import Provider6 from '../../../assets/icons/providers/6.svg'
+import Provider7 from '../../../assets/icons/providers/7.svg'
+import Provider8 from '../../../assets/icons/providers/8.svg'
+import Provider9 from '../../../assets/icons/providers/9.svg'
+import Provider10 from '../../../assets/icons/providers/10.svg'
+import Provider11 from '../../../assets/icons/providers/11.svg'
+import Provider12 from '../../../assets/icons/providers/12.svg'
+import Provider13 from '../../../assets/icons/providers/13.svg'
+import Provider14 from '../../../assets/icons/providers/14.svg'
+import Provider15 from '../../../assets/icons/providers/15.svg'
 import { useTranslation } from 'next-i18next'
 
 const alt = 'logo of the partner'
@@ -41,9 +41,13 @@ const providersList = [
 const Providers = () => {
     const { t } = useTranslation()
     return (
-        <section id="partners">
+        <section className={styles.providers__section} id="partners">
             <div className="container">
-                <SectionTitle>{t('provider.title')}</SectionTitle>
+                <SectionTitle
+                    title={t('provider.title')}
+                    topTitle={'Partners'}
+                />
+
                 <ul className={styles.list}>
                     {providersList.map((provider) => {
                         return (

@@ -98,7 +98,9 @@ const Form = ({ onFormSubmit }) => {
                     errors={errors}
                 />
             </div>
-            <Button isLoading={isLoading}>{t('form.send')}</Button>
+            <Button className={styles.btn} isLoading={isLoading}>
+                {t('form.send')}
+            </Button>
             {serverErrors && (
                 <ul style={{ marginTop: '20px' }}>
                     {serverErrors.map((el, i) => (
