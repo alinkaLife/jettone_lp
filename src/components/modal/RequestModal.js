@@ -17,7 +17,7 @@ const RequestModal = ({ handleToggleModal, isRequestModalOpen }) => {
             className={styles.modal}
             open={isRequestModalOpen}
         >
-            <Fade  in={isRequestModalOpen}>
+            <Fade in={isRequestModalOpen}>
                 <div className={styles.modal__wrapper}>
                     <div className={styles.modal__content}>
                         <Image
@@ -27,7 +27,8 @@ const RequestModal = ({ handleToggleModal, isRequestModalOpen }) => {
                             alt="close icon"
                         />
 
-                        <SectionTitle title={t('call-to-action')} />
+                        {/* <SectionTitle title={t('call-to-action')} /> */}
+                        <h2 className={styles.glav}>{t('call-to-action')}</h2>
                         <Form
                             onFormSubmit={() => {
                                 handleToggleModal()

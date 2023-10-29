@@ -41,11 +41,11 @@ const RequestSection = () => {
                                     <a
                                         className={styles.item}
                                         target="_blank"
-                                        href="mailto:support.jetton@gmail.com"
+                                        href="mailto:support@jetton.partners"
                                     >
                                         <Image src={mail} alt="mail" />
                                         <span className={styles.contacts}>
-                                            support.jetton@gmail.com
+                                            support@jetton.partners
                                         </span>
                                     </a>
                                 </li>

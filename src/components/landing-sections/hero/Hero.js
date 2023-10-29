@@ -13,7 +13,7 @@ const Hero = ({ handleModalOpen }) => {
             <div className="container">
                 <div className={styles.hero}>
                     <h1 className={styles.title}>
-                        <div className={styles.title__active}>JetTone</div>
+                        <div className={styles.title__active}>JetTon</div>
                         <div>{t('hero.title')}</div>
                     </h1>
                     <h2 className={styles.description}>

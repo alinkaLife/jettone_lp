@@ -194,6 +194,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 140%;
+        min-height: 199px;
     }
 
     .text {
@@ -214,7 +215,7 @@
 
     .main__list_item {
         padding: 32px;
-        min-height: 240px;
+        min-height: 380px;
     }
 
     .when {

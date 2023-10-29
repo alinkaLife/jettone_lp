@@ -12,6 +12,7 @@
 @media screen and (min-width:1300px) {
     .btn {
         width: auto;
+        margin: auto;
     }
 
     .input {
