@@ -79,5 +79,8 @@
     "geo": "GEO",
     "request": "Apply now",
 
-    "faq": "Frequently Asked Questions"
+    "faq": "Frequently Asked Questions",
+
+    "request2": "We are here to help you and we'd love to connect with you.",
+    "request3": "We'll get back in 24h."
 }

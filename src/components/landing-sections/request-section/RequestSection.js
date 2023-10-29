@@ -1,4 +1,3 @@
-import SectionTitle from '../../sharable/section-title/SectionTitle'
 import styles from './RequestSection.module.css'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
@@ -18,14 +17,11 @@ const RequestSection = () => {
                     <div className={styles.footer}>
                         <div className={styles.text__content}>
                             <p className={styles.glavniy}>
-                                Submit a Request to Join JetTon Partners
+                                {t('request.title')}
                             </p>
-                            <p className={styles.about}>
-                                We are here to help you and we'd love to connect
-                                with you.
-                            </p>
+                            <p className={styles.about}>{t('request2')}</p>
                             <p className={styles.about_bottom}>
-                                We'll get back in 24h.
+                                {t('request3')}
                             </p>
                             <h3 className={styles.name}>{t('footer.title')}</h3>
                             <ul className={styles.list}>

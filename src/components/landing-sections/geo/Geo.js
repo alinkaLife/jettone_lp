@@ -18,7 +18,7 @@ const Geo = () => {
                 <SectionTitle title={t('geo')} />
 
                 <div className={styles.geo_list_wrapper}>
-                    <Image className={styles.map} src={Map} />
+                    <Image className={styles.map} src={Map} alt="map" />
                     <ul className={styles.list}>
                         <li>
                             <Image src={ru} alt="flag of russia" />
