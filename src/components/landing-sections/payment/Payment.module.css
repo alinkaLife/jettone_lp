@@ -27,12 +27,12 @@
 
     background-image: url(../../../assets/icons/payments/1.svg), url('../../../assets/icons/grid_bg.svg');
     background-repeat: no-repeat;
-    background-position: top 20px right 20px, center;
+    background-position: top 20px right 20px, top 0 right 0;
 }
 
 .main__list_item_second {
     background-image: url(../../../assets/icons/payments/2.svg), url('../../../assets/icons/grid_bg.svg'), linear-gradient(45deg, #6B40EA -0.31%, #00A3FF 99.69%);
-    background-position: top 20px right 20px, center, center;
+    background-position: top 20px right 20px, top 0 right 0, center;
 }
 
 /* @media screen and (max-width: 744px) {
