@@ -32,7 +32,7 @@ const Promo = () => {
         <section className={styles.promo} id="promo">
             <div className="container">
                 <SectionTitle
-                    title={'Boost Earnings with Our Affiliate Program!'}
+                    title={t('promo.sectiontitle')}
                     topTitle={'Promo '}
                 />
 

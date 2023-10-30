@@ -2,7 +2,7 @@
     background-image: url(../../../assets/img/union_left.png), url('../../../assets/img/unionTop.png');
     background-repeat: no-repeat;
     background-position: top left, top 13% right;
-    background-size: 83px 369px, 83px ;
+    background-size: 83px 369px, 83px;
 }
 
 .main__list {
@@ -34,6 +34,14 @@
     background-image: url(../../../assets/icons/payments/2.svg), url('../../../assets/icons/grid_bg.svg'), linear-gradient(45deg, #6B40EA -0.31%, #00A3FF 99.69%);
     background-position: top 20px right 20px, center, center;
 }
+
+@media screen and (max-width: 744px) {
+    .main__list_item_second {
+        order: -1;
+    }
+}
+
+
 
 .main__list_item_second p {
     color: rgba(235, 235, 236, 0.80);
