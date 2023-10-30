@@ -35,11 +35,11 @@
     background-position: top 20px right 20px, center, center;
 }
 
-@media screen and (max-width: 744px) {
+/* @media screen and (max-width: 744px) {
     .main__list_item_second {
         order: -1;
     }
-}
+} */
 
 
 

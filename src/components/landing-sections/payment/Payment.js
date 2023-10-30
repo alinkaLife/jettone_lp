@@ -16,15 +16,10 @@ const Payment = () => {
         <section className={styles.payment__section} id="payments">
             <div className="container">
                 <SectionTitle
-                    title={'Payment Models'}
+                    title={t('payments.title')}
                     topTitle={'Payment Models '}
                 />
                 <ul className={styles.main__list}>
-                    <li className={styles.main__list_item}>
-                        <div className={styles.when}>coming soon</div>
-                        <h4 className={styles.text}>CPA</h4>
-                        <p className={styles.about}>{t('payment.model2')}</p>
-                    </li>
                     <li
                         className={[
                             styles.main__list_item,
@@ -32,7 +27,12 @@ const Payment = () => {
                         ].join(' ')}
                     >
                         <h4 className={styles.text}>RevShare</h4>
-                        <p className={styles.about}>{t('payment.model3')}</p>
+                        {/* <p className={styles.about}>{t('payment.model3')}</p> */}
+                    </li>
+                    <li className={styles.main__list_item}>
+                        <div className={styles.when}>coming soon</div>
+                        <h4 className={styles.text}>CPA</h4>
+                        {/* <p className={styles.about}>{t('payment.model2')}</p> */}
                     </li>
                     <li
                         className={[
@@ -42,7 +42,7 @@ const Payment = () => {
                     >
                         <div className={styles.when}>coming soon</div>
                         <h4 className={styles.text}>Hybrid</h4>
-                        <p className={styles.about}>{t('payment.model1')}</p>
+                        {/* <p className={styles.about}>{t('payment.model1')}</p> */}
                     </li>
                 </ul>
                 <h3 className={styles.section__subtitle}>
