@@ -26,7 +26,7 @@ const Payment = () => {
                             styles.main__list_item_second,
                         ].join(' ')}
                     >
-                        <h4 className={styles.text}>RevShare</h4>
+                        <h4 className={styles.text}>RevShare 50%</h4>
                         {/* <p className={styles.about}>{t('payment.model3')}</p> */}
                     </li>
                     <li className={styles.main__list_item}>

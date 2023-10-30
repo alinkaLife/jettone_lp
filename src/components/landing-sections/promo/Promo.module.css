@@ -27,7 +27,7 @@
 .list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 12px;
 }
 
@@ -84,7 +84,7 @@
 
     .list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: repeat(2, 120px);
+        grid-template-rows: repeat(1, 120px);
     }
 
     .item {
@@ -123,7 +123,7 @@
     }
 
     .list {
-        grid-template-rows: repeat(2, 170px);
+        grid-template-rows: repeat(1, 170px);
         gap: 40px;
     }
 

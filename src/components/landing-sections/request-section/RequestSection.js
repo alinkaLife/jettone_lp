@@ -19,10 +19,10 @@ const RequestSection = () => {
                             <p className={styles.glavniy}>
                                 {t('request.title')}
                             </p>
-                            <p className={styles.about}>{t('request2')}</p>
+                            {/* <p className={styles.about}>{t('request2')}</p>
                             <p className={styles.about_bottom}>
                                 {t('request3')}
-                            </p>
+                            </p> */}
                             <h3 className={styles.name}>{t('footer.title')}</h3>
                             <ul className={styles.list}>
                                 <li>

@@ -20,12 +20,12 @@ const Promo = () => {
     const promoList = [
         { text: t('promo.item1'), icon: Picture },
         { text: t('promo.item2'), icon: Picture1 },
-        { text: t('promo.item3'), icon: Picture2 },
+        // { text: t('promo.item3'), icon: Picture2 },
         { text: t('promo.item4'), icon: Picture3 },
         { text: t('promo.item5'), icon: Picture4 },
-        { text: t('promo.item6'), icon: Picture5 },
-        { text: t('promo.item7'), icon: Picture6 },
-        { text: t('promo.item8'), icon: Picture7 },
+        // { text: t('promo.item6'), icon: Picture5 },
+        // { text: t('promo.item7'), icon: Picture6 },
+        // { text: t('promo.item8'), icon: Picture7 },
     ]
 
     return (
