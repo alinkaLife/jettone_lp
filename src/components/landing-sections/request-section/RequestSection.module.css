@@ -51,7 +51,7 @@
     font-weight: 700;
     line-height: 120%;
     letter-spacing: -0.24px;
-    margin-bottom: 12px;
+    margin-bottom: 80px;
 }
 
 .text__content {
@@ -207,7 +207,7 @@
         line-height: 120%;
         letter-spacing: -0.4px;
         max-width: 100%;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
     }
 
     .about {
