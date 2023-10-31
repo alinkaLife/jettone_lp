@@ -30,9 +30,10 @@
     min-height: 160px;
     position: relative;
     display: flex;
+    gap: 20px;
     padding: 16px;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: flex-start;
     align-self: stretch;
     border-radius: 16px;
