@@ -24,15 +24,16 @@
 }
 
 .action__block {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
     align-items: center;
     gap: 8px;
+
 }
 
 .logo {
     width: 103px;
     height: 40px;
+
 }
 
 .request {
@@ -40,6 +41,22 @@
     min-height: 40px;
     min-width: 110px;
 }
+
+.login {
+    padding: 0px 10px;
+    min-height: 40px;
+    min-width: 110px;
+}
+
+.signUp {
+    padding: 0px 10px;
+    min-height: 40px;
+    min-width: 110px;
+    @media screen and (max-width: 744px) {
+        display: none;
+    }
+}
+
 
 
 @media screen and (min-width: 744px) {

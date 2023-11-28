@@ -26,24 +26,29 @@ const Header = ({ handleModalOpen }) => {
 
     return (
         <header className={styles.header__top}>
-            <div className="container">
+            <div className='container'>
                 <div className={styles.header}>
                     <Link href={'/'}>
                         <Image
                             className={styles.logo}
                             priority={true}
                             src={Logoicon}
-                            alt="logo"
+                            alt='logo'
                         />
                     </Link>
                     <div className={styles.isHidden}>{navigation}</div>
                     <div className={styles.action__block}>
                         <DesktopLangSwitcher />
                         <Button
-                            className={styles.request}
-                            onClick={handleModalOpen}
+                            onClick={() => window.open('https://dashboard.jetton.partners/login')}
+                            className={styles.login}
                         >
-                            {t('request')}
+                            {t('login')}
+                        </Button>
+                        <Button
+                            onClick={() => window.open('https://dashboard.jetton.partners/sign-up')}
+                            className={styles.signUp}>
+                            {t('signup')}
                         </Button>
                         <Burger
                             isOpen={isOpenMobileMenu}
