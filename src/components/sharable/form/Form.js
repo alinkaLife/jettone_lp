@@ -34,8 +34,16 @@ const Form = ({ onFormSubmit }) => {
         try {
             const body = JSON.stringify(formData)
             setisLoading(true)
+            // const res = await fetch('https://promoapi.0000.team/partners/application', { method: 'POST', body })
 
-            const res = await fetch('/api/hello', { method: 'POST', body })
+            const res = await fetch('https://promoapi.jetton.games/partners/applications', { method: 'POST',
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+                ,
+
+                body })
 
             if (res.status === 403) {
                 setServerErrors(await res.json())
