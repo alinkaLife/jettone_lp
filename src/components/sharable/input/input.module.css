@@ -10,6 +10,7 @@
     background: transparent;
     color: #8D93BD;
     transition: all 500ms;
+    display: none;
 }
 
 .input:focus+.label {
@@ -25,6 +26,11 @@
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.16px;
+    display: unset;
+
+}
+.input:focus::placeholder {
+    color: transparent; /* Makes the placeholder text transparent */
 }
 
 .input:not(:placeholder-shown)+.label {
@@ -45,6 +51,8 @@
 .input:not(:placeholder-shown) {
     background: #242775;
     border: 2px solid white;
+
+
 }
 
 .input:focus {
@@ -79,6 +87,7 @@
 
     outline: none;
     cursor: pointer;
+
 }
 
 

@@ -6,7 +6,7 @@ const Input = ({ placeholder, name, register, errors }) => {
         <div>
             <div className={styles.input__wrapper}>
                 <input
-                    placeholder=" "
+                    placeholder={placeholder}
                     autoComplete="new-password"
                     name={name}
                     id={placeholder}
