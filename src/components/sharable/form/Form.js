@@ -36,7 +36,8 @@ const Form = ({ onFormSubmit }) => {
             setisLoading(true)
             // const res = await fetch('https://promoapi.0000.team/partners/application', { method: 'POST', body })
 
-            const res = await fetch('https://promoapi.jetton.games/partners/applications', { method: 'POST',
+
+            const res = await fetch('https://promoapi.jetton.partners/partners/applications', { method: 'POST',
                 headers:{
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
@@ -58,7 +59,7 @@ const Form = ({ onFormSubmit }) => {
                 }, 2000)
             }
         } catch (error) {
-            setServerErrors(error)
+            // setServerErrors(error)
         } finally {
             setisLoading(false)
         }

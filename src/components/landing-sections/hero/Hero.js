@@ -9,8 +9,8 @@ const Hero = ({ handleModalOpen }) => {
     const { t } = useTranslation()
 
     return (
-        <section className={styles.hero__section} id="hero">
-            <div className="container">
+        <section className={styles.hero__section} id='hero'>
+            <div className='container'>
                 <div className={styles.hero}>
                     <h1 className={styles.title}>
                         <div className={styles.title__active}>JetTon</div>

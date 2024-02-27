@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="container">
                 <div className={styles.company}>
                     {/* <Image src={logo} alt="logotip" /> */}
-                    <p>© JetTON Partners 2023, All rights reserved</p>
+                    <p>© JetTON Partners 2024, All rights reserved</p>
                 </div>
             </div>
         </footer>
