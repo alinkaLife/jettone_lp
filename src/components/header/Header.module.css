@@ -33,6 +33,10 @@
 .logo {
     width: 103px;
     height: 40px;
+    @media screen and (max-width: 744px) {
+        width: 80px;
+        height: 32px;
+    }
 
 }
 
@@ -46,6 +50,11 @@
     padding: 0px 10px;
     min-height: 40px;
     min-width: 110px;
+    @media screen and (max-width: 744px) {
+        min-width: 60px;
+        font-size: 12px !important;
+
+    }
 }
 
 .signUp {
@@ -53,7 +62,8 @@
     min-height: 40px;
     min-width: 110px;
     @media screen and (max-width: 744px) {
-        display: none;
+        min-width: 60px;
+        font-size: 12px !important;
     }
 }
 
